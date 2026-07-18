@@ -999,12 +999,15 @@ function get_conjugation(word, tags, tail) {
 			}
 		}
 
-		var new_form = word2.substring(0, word2.length - conjugation_size) + ending_true;
+		var word3 = word2.substring(0, word2.length - conjugation_size);
+
+		if (ending_true.startsWith("s") && word3.endsWith("s")) ending_true = ending_true.substring(1);
+
+		var new_form = word3 + ending_true;
 
 		if (new_form.includes("ts")) new_form = new_form.replaceAll("ts", "z");
 		if (new_form.includes("ds")) new_form = new_form.replaceAll("ds", "z");
 		if (new_form.includes("dt")) new_form = new_form.replaceAll("dt", "t");
-		if (new_form.includes("sst")) new_form = new_form.replaceAll("sst", "st");
 		if (new_form.includes("ftt")) new_form = new_form.replaceAll("ftt", "ft");
 		if (tail) new_form += tail;
 
