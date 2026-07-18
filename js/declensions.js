@@ -78,6 +78,12 @@ const noun_declensions = {
 		"u", "unni", "um", "unum",
 		"u", "unnar", "a", "anna",
 	],
+	feminine_un: [
+		"un", "unin", "a-anir", "a-anirnar",
+		"un", "ununa", "a-anir", "a-anirnar",
+		"un", "ununni", "unum", "ununum",
+		"a-anar", "a-anarinnar", "a-ana", "a-ananna",
+	],
 	feminine_none: [
 		"", "in", "e-ir", "e-irnar",
 		"", "una", "e-ir", "e-irnar",
@@ -193,6 +199,7 @@ function analyse_noun(word, gender) {
 
 	if (word.endsWith("ir") && gender == "masculine noun") stem_end = word.length - 3;
 	if (word.endsWith("ttir") && gender == "feminine noun") stem_end = word.length - 3;
+	if (word.endsWith("un") && gender == "feminine noun") stem_end = word.length - 3;
 
 	for (var i = stem_end; i >= 0; i--) {
 		if (vowels.includes(word.charAt(i))) {
@@ -294,6 +301,9 @@ function get_declension(word, gender, tags) {
 			if (word.endsWith("a")) {
 				declension = noun_declensions.feminine_a;
 				declension_size = 1;
+			} else if (word.endsWith("un")) {
+				declension = noun_declensions.feminine_un;
+				declension_size = 2;
 			} else if (word.endsWith("i")) {
 				declension = noun_declensions.feminine_i;
 				declension_size = 1;
