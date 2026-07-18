@@ -982,6 +982,7 @@ function get_conjugation(word, tags, tail) {
 		if (new_form.includes("ts")) new_form = new_form.replaceAll("ts", "z");
 		if (new_form.includes("ds")) new_form = new_form.replaceAll("ds", "z");
 		if (new_form.includes("dt")) new_form = new_form.replaceAll("dt", "t");
+		if (new_form.includes("sst")) new_form = new_form.replaceAll("sst", "st");
 		if (tail) new_form += tail;
 
 		word_forms.push(new_form);

@@ -13,6 +13,7 @@
 	<div id="letters" class="letterlist h2font"></div>
 	<hr>
 	<h3 id="word">Word not found</h3>
+	<h4 id="ipa" class="ipa">//</h4>
 	<p id="type">n/a</p>
 	<ol id="definitions" class="pfont"></ol>
 	<div id="tables"></div>
@@ -24,6 +25,7 @@
 <script src="js/lexicon.js"></script>
 <script src="js/declensions.js"></script>
 <script src="js/conjugations.js"></script>
+<script src="js/ipa.js"></script>
 <script src="js/html.js"></script>
 <script>
 	var query = window.location.search;
@@ -41,6 +43,7 @@
 
 		document.getElementById("title").innerHTML = "Northmannish Dictionary - " + v.charAt(0).toUpperCase() + v.substring(1);
 		document.getElementById("word").innerHTML = v;
+		document.getElementById("ipa").innerHTML = "[" + construct_ipa(v2) + "]";
 
 		if (tags != "") {
 			document.getElementById("type").innerHTML = word_type_short_form[entry[0]] + " (" + tags + ")";
@@ -123,7 +126,7 @@
 
 				var conjugation = [];
 				var isMediopassive = false;
-				var isIntransitive = v3.endsWith("(intransitive)") && !v3.includes(";");
+				var isIntransitive = entry[1].endsWith("(intransitive)") && !v3.includes(";");
 
 				if (v3.endsWith("sk")) {
 					document.getElementById("tables").innerHTML = html_tables.verb_mediopassive;
@@ -137,9 +140,9 @@
 					isMediopassive = true;
 				} else {
 					if (isIntransitive) {
-						document.getElementById("tables").innerHTML = html_tables.verb + "<br>" + html_tables.verb_mediopassive;
-					} else {
 						document.getElementById("tables").innerHTML = html_tables.verb;
+					} else {
+						document.getElementById("tables").innerHTML = html_tables.verb + "<br>" + html_tables.verb_mediopassive;
 					}
 				
 					conjugation = get_conjugation(v3, tags, tail);
