@@ -42,11 +42,13 @@ const ipa_dict = {
 	"-gn": "kn̥",
 	"h": "x",
 	"j": "j",
+	"hj": "ȷ̊",
 	"k": "k",
 	"kk": "hk",
 	"kv": "kf",
 	"l": "l",
 	"ll": "tl̥",
+	"hl": "l̥",
 	"-lg": "lk",
 	"m": "m",
 	"mm": "m",
@@ -66,7 +68,6 @@ const ipa_dict = {
 	"pn": "pn̥",
 	"r": "r",
 	"rr": "rː",
-	"-r": "r̩",
 	"hr": "r̥",
 	"s": "s",
 	"ss": "ʃː",
@@ -100,21 +101,27 @@ const ipa_dict = {
 	"yngj": "yŋc",
 
 	"þr-": "θr",
+	"ðsl": "ðsl",
+
+	"-r": "r",
+	"r_ending": "r̩",
 };
 
 const ipa_dict_regional = {
 	"o": "ɔ",
 	"á": "ɑuː",
+	"ø": "ɔː",
 	"œ": "ʌiː",
 
-	"ey": "øyː",
-	"eyrr": "øyrː",
+	"ey": "ʌyː",
+	"eyrr": "ʌyrː",
 
 	"kv": "kf",
 	"ll": "lː",
 	"hv": "kf",
 
 	"þr-": "ðr",
+	"ðsl": "θsl",
 };
 
 const special_ipa_constructions = {
@@ -126,7 +133,7 @@ const special_ipa_constructions = {
 };
 
 function check_vowels(section) {
-	var vowels = "aɛeɪioʊuʏyœɤ";
+	var vowels = "aáeiíoóuúyýæøœ";
 
 	if (section.length == 1) {
 		return vowels.includes(section.charAt(0));
@@ -144,24 +151,27 @@ function get_section_ipa(section, regional) {
 }
 
 function construct_ipa(word, regional) {
+	var word2 = word.toLowerCase();
 	var pronunciation = "";
 	var counted_vowels = 0;
 
-	if (word in special_ipa_constructions) {
-		if (special_ipa_constructions[word].constructor === Array) {
+	var vowels = "aáeiíoóuúyýæøœ";
+
+	if (word2 in special_ipa_constructions) {
+		if (special_ipa_constructions[word2].constructor === Array) {
 			if (regional) {
-				return special_ipa_constructions[word][1];
+				return special_ipa_constructions[word2][1];
 			} else {
-				return special_ipa_constructions[word][0];
+				return special_ipa_constructions[word2][0];
 			}
 		} else {
-			return special_ipa_constructions[word];
+			return special_ipa_constructions[word2];
 		}
 	}
 
-	for (var i = 0; i < word.length; i++) {
-		for (var k = word.length; k > i; k--) {
-			var section = word.substring(i, k);
+	for (var i = 0; i < word2.length; i++) {
+		for (var k = word2.length; k > i; k--) {
+			var section = word2.substring(i, k);
 
 			if (section.includes("-")) continue;
 			if (section.includes(" ")) {
@@ -170,7 +180,7 @@ function construct_ipa(word, regional) {
 				continue;
 			}
 
-			if ((i == 0 || word.charAt(i - 1) == "-") && section + "-" in ipa_dict) {
+			if ((i == 0 || word2.charAt(i - 1) == "-") && section + "-" in ipa_dict) {
 				pronunciation += get_section_ipa(section + "-", regional);
 				i += section.length - 1;
 
@@ -179,8 +189,13 @@ function construct_ipa(word, regional) {
 				break;
 			}
 
-			if (k == word.length && "-" + section in ipa_dict) {
-				pronunciation += get_section_ipa("-" + section, regional);
+			if (k == word2.length && "-" + section in ipa_dict) {
+				if (section == "r" && !vowels.includes(word2.charAt(i - 1))) {
+					pronunciation += get_section_ipa("r_ending", regional);
+				} else {
+					pronunciation += get_section_ipa("-" + section, regional);
+				}
+				
 				i += section.length - 1;
 
 				if (check_vowels(section)) counted_vowels += 1;
