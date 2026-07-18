@@ -788,7 +788,7 @@ function analyse_verb(word) {
 		}
 	}
 
-	if ("aáoóuú".includes(vowel_chr)) stem = "a";
+	if ("jajájojójujú".includes(vowel_chr)) stem = "a";
 	if (word.endsWith("na") && !vowels.includes(word.charAt(word.length - 3)) && !word.endsWith("nna")) stem = "a";
 	if (vowel_chr == "ø" && word.endsWith("va")) stem = "a";
 
@@ -796,6 +796,19 @@ function analyse_verb(word) {
 }
 
 function get_conjugation(word, tags, tail) {
+	if (word.includes("-")) {
+		var prefix = word.substring(0, word.indexOf("-"));
+		var verb = word.substring(word.indexOf("-") + 1, word.length);
+
+		var conjugation2 = get_conjugation(verb, tags, tail);
+
+		for (var i = 0; i < conjugation2.length; i++) {
+			conjugation2[i] = prefix + conjugation2[i];
+		}
+
+		return conjugation2;
+	}
+
 	var conjugation = [];
 	var conjugation_size = 1;
 	var analysis = analyse_verb(word, tags);
@@ -973,6 +986,10 @@ function get_conjugation(word, tags, tail) {
 		word_forms.push(word.substring(0, word.length - 1) + "áask" + tail);
 	} else {
 		word_forms.push(word.substring(0, word.length - 1) + "ask" + tail);
+	}
+
+	for (var i = 0; i < word_forms.length; i++) {
+		word_forms[i] = word_forms[i].replaceAll("-", "");
 	}
 
 	return word_forms;

@@ -92,8 +92,8 @@
 					window.onresize = onWindowResize;
 					onWindowResize();
 
-					document.getElementById("declension_top").innerHTML = v2;
-					if (document.getElementById("_declension_top")) document.getElementById("_declension_top").innerHTML = v2;
+					document.getElementById("declension_top").innerHTML = v2.replaceAll("-", "");;
+					if (document.getElementById("_declension_top")) document.getElementById("_declension_top").innerHTML = v2.replaceAll("-", "");;
 
 					if (entry[0] == "masculine noun") {
 						document.getElementById("gender").innerHTML = "masculine";
@@ -141,8 +141,8 @@
 				}
 
 				if (!isMediopassive) {
-					document.getElementById("conjugation_top").innerHTML = "at " + v2;
-					document.getElementById("infinitive").innerHTML = "at " + v2;
+					document.getElementById("conjugation_top").innerHTML = "at " + v2.replaceAll("-", "");
+					document.getElementById("infinitive").innerHTML = "at " + v2.replaceAll("-", "");;
 					document.getElementById("supine").innerHTML = conjugation[25] + " (" + conjugation[24] + ")";
 					document.getElementById("present_participle").innerHTML = conjugation[26];
 					document.getElementById("gerund").innerHTML = conjugation[27];

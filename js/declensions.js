@@ -11,6 +11,12 @@ const noun_declensions = {
 		"e-i", "e-inum", "um", "unum",
 		"a-ar", "a-arins", "a-a", "a-anna",
 	],
+	masculine_nn: [
+		"n", "ninn", "ar", "arnir",
+		"", "inn", "a", "ana",
+		"i", "inum", "um", "unum",
+		"s", "sins", "a", "anna",
+	],
 	masculine_ll: [
 		"_ll", "_llinn", "lar", "larnir",
 		"_l", "_linn", "la", "lana",
@@ -20,7 +26,7 @@ const noun_declensions = {
 	masculine_ll2: [
 		"l", "linn", "ar", "arnir",
 		"", "inn", "a", "ana",
-		"i", "inum", "um", "unum",
+		"", "inum", "um", "unum",
 		"s", "sins", "a", "anna",
 	],
 	masculine_rr: [
@@ -274,6 +280,12 @@ function get_declension(word, gender, tags) {
 					declension = noun_declensions.masculine_ll2;
 					declension_size = 1;
 				}
+			} else if (word.endsWith("inn") && !word.endsWith("einn")) {
+				declension = noun_declensions.masculine_inn;
+				declension_size = 3;
+			} else if (word.endsWith("nn")) {
+				declension = noun_declensions.masculine_nn;
+				declension_size = 1;
 			} else {
 				declension = noun_declensions.masculine_none;
 				declension_size = 0;
@@ -354,6 +366,10 @@ function get_declension(word, gender, tags) {
 		} else {
 			word_forms.push(word2.substring(0, word2.length - declension_size) + ending_true);
 		}
+	}
+
+	for (var i = 0; i < 16; i++) {
+		word_forms[i] = word_forms[i].replaceAll("-", "");
 	}
 
 	return word_forms;
