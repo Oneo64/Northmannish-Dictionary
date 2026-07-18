@@ -113,7 +113,6 @@ const ipa_dict = {
 const ipa_dict_regional = {
 	"o": "ɔ",
 	"á": "ɑuː",
-	"ø": "ɔː",
 	"œ": "ʌiː",
 
 	"ey": "ʌyː",
