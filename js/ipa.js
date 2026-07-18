@@ -22,6 +22,7 @@ const ipa_dict = {
 	"ey": "eyː",
 
 	"einn": "einnː",
+	"ein-": "ein",
 	"eirr": "eirː",
 	"eyrr": "eyrː",
 
