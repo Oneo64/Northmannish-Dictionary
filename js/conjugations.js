@@ -48,7 +48,7 @@ const verb_conjugations = {
 		"usk", "tusk",
 		"usk", "tusk",
 
-		"tinn", "t", 1
+		"tr", "t", 1
 	],
 	weak_dh2_i: [
 		"i", "ða",
@@ -83,6 +83,23 @@ const verb_conjugations = {
 		"usk", "dusk",
 
 		"dr", "t", 1
+	],
+	weak_eyja: [
+		"", "ða",
+		"r", "ðir",
+		"r", "ði",
+		"jum", "ðum",
+		"juð", "ðuð",
+		"ju", "ðu",
+
+		"jisk", "ðisk",
+		"jisk", "ðisk",
+		"jisk", "ðisk",
+		"jumsk", "ðumsk",
+		"jusk", "ðusk",
+		"jusk", "ðusk",
+
+		"ðr", "tt", 1
 	],
 
 	weak_y_da: [
@@ -936,6 +953,11 @@ function get_conjugation(word, tags, tail) {
 
 				if (word.endsWith("la") || word.endsWith("lja")) conjugation = verb_conjugations.weak_d_i;
 
+				if (word.endsWith("eyja")) {
+					conjugation = verb_conjugations.weak_eyja;
+					no_j_insert = true;
+				}
+
 				if (word.endsWith("nga") || word.endsWith("ngja") || word.endsWith("na") || word.endsWith("ma")) {
 					conjugation = verb_conjugations.weak_d_i;
 				} else if (word.endsWith("ga") || word.endsWith("gja")) {
@@ -983,6 +1005,7 @@ function get_conjugation(word, tags, tail) {
 		if (new_form.includes("ds")) new_form = new_form.replaceAll("ds", "z");
 		if (new_form.includes("dt")) new_form = new_form.replaceAll("dt", "t");
 		if (new_form.includes("sst")) new_form = new_form.replaceAll("sst", "st");
+		if (new_form.includes("ftt")) new_form = new_form.replaceAll("ftt", "ft");
 		if (tail) new_form += tail;
 
 		word_forms.push(new_form);

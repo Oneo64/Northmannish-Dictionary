@@ -202,6 +202,8 @@
 		if (entry.length == 4) {
 			var examples = entry[3];
 
+			document.getElementById("examples").innerHTML = "";
+
 			for (var i = 0; i < examples.length; i++) {
 				document.getElementById("examples").innerHTML += "<p>" + entry[3][i] + "</p>";
 			}
