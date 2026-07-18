@@ -123,6 +123,7 @@
 
 				var conjugation = [];
 				var isMediopassive = false;
+				var isIntransitive = v3.endsWith("(intransitive)") && !v3.includes(";");
 
 				if (v3.endsWith("sk")) {
 					document.getElementById("tables").innerHTML = html_tables.verb_mediopassive;
@@ -135,7 +136,11 @@
 
 					isMediopassive = true;
 				} else {
-					document.getElementById("tables").innerHTML = html_tables.verb + "<br>" + html_tables.verb_mediopassive;
+					if (isIntransitive) {
+						document.getElementById("tables").innerHTML = html_tables.verb + "<br>" + html_tables.verb_mediopassive;
+					} else {
+						document.getElementById("tables").innerHTML = html_tables.verb;
+					}
 				
 					conjugation = get_conjugation(v3, tags, tail);
 				}
@@ -159,7 +164,7 @@
 					}
 				}
 
-				if (!isMediopassive) {
+				if (!isMediopassive && !isIntransitive) {
 					document.getElementById("mediopassive_top").innerHTML = "at " + conjugation[28];
 					document.getElementById("infinitive2").innerHTML = "at " + conjugation[28];
 
