@@ -398,24 +398,6 @@ const verb_conjugations = {
 };
 
 const strong_verb_a_conjugations = {
-	unna: [
-		"ann", "unna",
-		"annr", "unnir",
-		"annr", "unni",
-		"ønnum", "unnum",
-		"ønnuð", "unnuð",
-		"ønnu", "unnu",
-
-		"annsk", "unnisk",
-		"annsk", "unnisk",
-		"annsk", "unnisk",
-		"ønnumsk", "unnumsk",
-		"ønnusk", "unnusk",
-		"ønnusk", "unnusk",
-
-		"ynndr", "ynnt",
-		"unnandi", "unning", "unnask"
-	],
 	binda: [
 		"bind", "batt",
 		"bindr", "bazt",
@@ -578,6 +560,24 @@ const strong_verb_a_conjugations = {
 		"leginn", "legið",
 		"liggjandi", "ligging", "liggjask"
 	],
+	muna: [
+		"man", "munda",
+		"mant", "mundir",
+		"man", "mundi",
+		"mønum", "mundum",
+		"mønuð", "munduð",
+		"mønu", "mundu",
+
+		"mansk", "mundisk",
+		"mansk", "mundisk",
+		"mansk", "mundisk",
+		"mønumsk", "mundumsk",
+		"mønusk", "mundusk",
+		"mønusk", "mundusk",
+
+		"muninn", "munið",
+		"munandi", "muning", "munask"
+	],
 	sjá: [
 		"se", "svá",
 		"ser", "svást",
@@ -649,6 +649,24 @@ const strong_verb_a_conjugations = {
 
 		"songinn", "songið",
 		"syngjandi", "synging", "syngjask"
+	],
+	unna: [
+		"ann", "unna",
+		"annr", "unnir",
+		"annr", "unni",
+		"ønnum", "unnum",
+		"ønnuð", "unnuð",
+		"ønnu", "unnu",
+
+		"annsk", "unnisk",
+		"annsk", "unnisk",
+		"annsk", "unnisk",
+		"ønnumsk", "unnumsk",
+		"ønnusk", "unnusk",
+		"ønnusk", "unnusk",
+
+		"ynndr", "ynnt",
+		"unnandi", "unning", "unnask"
 	],
 	vera: [
 		"er", "var",
@@ -725,7 +743,7 @@ const strong_verb_a_conjugations = {
 
 	munu: [
 		"mun", "mynda",
-		"mun", "myndir",
+		"munt", "myndir",
 		"mun", "myndi",
 		"munum", "myndum",
 		"munuð", "mynduð",
