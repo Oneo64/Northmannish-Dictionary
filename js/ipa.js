@@ -116,8 +116,8 @@ const ipa_dict_regional = {
 	"á": "ɑuː",
 	"œ": "ʌiː",
 
-	"ey": "ʌyː",
-	"eyrr": "ʌyrː",
+	"ey": "ʌɪː",
+	"eyrr": "ʌɪrː",
 
 	"kv": "kf",
 	"ll": "lː",
