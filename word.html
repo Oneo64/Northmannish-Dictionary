@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title id="title">Northmannish Dictionary</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="icon" type="image/x-icon" href="images/favicon.png">
+</head>
+<body>
+<div class="body">
+	<span class="titlespan"><img class="h1favicon" src="images/favicon.png" alt="favicon"><h1><a href="index.html">Northmannish Dictionary</a></h1></span>
+	<div id="letters" class="letterlist h2font"></div>
+	<hr>
+	<h3 id="word">Word not found</h3>
+	<p id="type">n/a</p>
+	<ol id="definitions" class="pfont"></ol>
+	<div id="tables"></div>
+	<hr>
+	<p>This conlang is under the license <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.</p>
+</div>
+
+<script src="js/letters.js"></script>
+<script src="js/lexicon.js"></script>
+<script src="js/declensions.js"></script>
+<script src="js/conjugations.js"></script>
+<script src="js/html.js"></script>
+<script>
+	var query = window.location.search;
+	var params = new URLSearchParams(query);
+	var v = params.get("v");
+
+	if (v in entries) {
+		var entry = entries[v];
+		var v2 = v;
+
+		var tags = "";
+		if (entry.length >= 3 && entry[2] != "") tags = entry[2];
+
+		if (v.endsWith(")")) v2 = v.substring(0, v.length - 4);
+
+		document.getElementById("title").innerHTML = "Northmannish Dictionary - " + v.charAt(0).toUpperCase() + v.substring(1);
+		document.getElementById("word").innerHTML = v;
+
+		if (tags != "") {
+			document.getElementById("type").innerHTML = word_type_short_form[entry[0]] + " (" + tags + ")";
+		} else {
+			document.getElementById("type").innerHTML = word_type_short_form[entry[0]];
+		}
+
+		document.getElementById("definitions").innerHTML = "";
+
+		var defText = entry[1];
+
+		if (defText.includes("|")) defText = defText.substring(0, defText.indexOf("|")).trim();
+
+		var defs = defText.split(";");
+
+		for (var i = 0; i < defs.length; i++) {
+			document.getElementById("definitions").innerHTML += "<li>" + defs[i] + "</li>";
+		}
+
+		function onWindowResize() {
+			if (document.getElementById("noun_declension_mobile")) {
+				if (window.innerWidth < 500 || window.innerHeight < 500) {
+					if (document.getElementById("noun_declension_mobile").hidden) {
+						document.getElementById("noun_declension").hidden = true;
+						document.getElementById("noun_declension_mobile").hidden = false;
+					}
+				} else {
+					if (document.getElementById("noun_declension").hidden) {
+						document.getElementById("noun_declension").hidden = false;
+						document.getElementById("noun_declension_mobile").hidden = true;
+					}
+				}
+			}
+		}
+
+		if (!tags.includes("indeclinable")) {
+			if (entry[0].endsWith("noun")) {
+				if (tags.includes("sg-only")) {
+					document.getElementById("tables").innerHTML = html_tables.noun_sg;
+				} else if (tags.includes("pl-only")) {
+					document.getElementById("tables").innerHTML = html_tables.noun_pl;
+				} else {
+					document.getElementById("tables").innerHTML = html_tables.noun + html_tables.noun_mobile;
+				}	
+
+				var declension = get_declension(v2, entry[0], tags);
+
+				if (declension.length != 0) {
+					window.onresize = onWindowResize;
+					onWindowResize();
+
+					document.getElementById("declension_top").innerHTML = v2;
+					if (document.getElementById("_declension_top")) document.getElementById("_declension_top").innerHTML = v2;
+
+					if (entry[0] == "masculine noun") {
+						document.getElementById("gender").innerHTML = "masculine";
+						if (document.getElementById("_gender")) document.getElementById("_gender").innerHTML = "masculine";
+					}
+
+					if (entry[0] == "feminine noun") {
+						document.getElementById("gender").innerHTML = "feminine";
+						if (document.getElementById("_gender")) document.getElementById("_gender").innerHTML = "feminine";
+					}
+
+					for (var i = 0; i < 16; i++) {
+						if (document.getElementById("n" + i)) document.getElementById("n" + i).innerHTML = declension[i];
+						if (document.getElementById("_n" + i)) document.getElementById("_n" + i).innerHTML = declension[i];
+					}
+				}
+			}
+
+			if (entry[0] == "verb") {
+				var v3 = v2;
+				var tail = "";
+
+				if (v2.includes(" ")) {
+					tail = v2.substring(v2.indexOf(" "));
+					v3 = v2.substring(0, v2.indexOf(" "));
+				}
+
+				var conjugation = [];
+				var isMediopassive = false;
+
+				if (v3.endsWith("sk")) {
+					document.getElementById("tables").innerHTML = html_tables.verb_mediopassive;
+
+					if (v3.endsWith("áask") && v3.substring(0, v3.length - 3) in entries) {
+						conjugation = get_conjugation(v3.substring(0, v3.length - 3), tags, tail);
+					} else {
+						conjugation = get_conjugation(v3.substring(0, v3.length - 2), tags, tail);
+					}
+
+					isMediopassive = true;
+				} else {
+					document.getElementById("tables").innerHTML = html_tables.verb + "<br>" + html_tables.verb_mediopassive;
+				
+					conjugation = get_conjugation(v3, tags, tail);
+				}
+
+				if (!isMediopassive) {
+					document.getElementById("conjugation_top").innerHTML = "at " + v2;
+					document.getElementById("infinitive").innerHTML = "at " + v2;
+					document.getElementById("supine").innerHTML = conjugation[25] + " (" + conjugation[24] + ")";
+					document.getElementById("present_participle").innerHTML = conjugation[26];
+					document.getElementById("gerund").innerHTML = conjugation[27];
+				} else {
+					document.getElementById("mediopassive_top").innerHTML = "at " + conjugation[28];
+					document.getElementById("infinitive2").innerHTML = "at " + conjugation[28];
+				}
+
+				for (var i = 0; i < 12; i++) {
+					if (isMediopassive) {
+						document.getElementById("_v" + i).innerHTML = conjugation[i + 12];
+					} else {
+						document.getElementById("v" + i).innerHTML = conjugation[i];
+					}
+				}
+
+				if (!isMediopassive) {
+					document.getElementById("mediopassive_top").innerHTML = "at " + conjugation[28];
+					document.getElementById("infinitive2").innerHTML = "at " + conjugation[28];
+
+					for (var i = 12; i < 24; i++) {
+						var i2 = i - 12;
+
+						if (document.getElementById("_v" + i2)) document.getElementById("_v" + i2).innerHTML = conjugation[i];
+					}
+				}
+			}
+
+			if (entry[0] == "auxiliary") {
+				document.getElementById("tables").innerHTML = html_tables.auxiliary;
+
+				document.getElementById("auxiliary_top").innerHTML = v2;
+
+				for (var i = 0; i < 12; i++) {
+					document.getElementById("v" + i).innerHTML = strong_verb_a_conjugations[v2][i];
+				}
+			}
+		}
+	}
+</script>
+</body>
+</html>
