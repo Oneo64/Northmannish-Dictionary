@@ -3818,7 +3818,7 @@ const entries = {
 	"sløngva": ["verb", "to sling, to throw, to cast (with dative \"projectile\" + at + accusative \"target\")"],
 	"sløðva": ["verb", "to trail, to go along (with accusative)"],
 	"smaragðr": ["masculine noun", "emerald"],
-	"smarta": ["verb", "to smite, to strike, to bash"],
+	"smarta": ["verb", "to hurt, to feel painful (intransitive)"],
 	"smitta": ["verb", "to infect"],
 	"smiðja": ["feminine noun", "smithy"],
 	"smiðju-eldr": ["masculine noun", "a forge (a device used by blacksmiths to heat metal)"],
