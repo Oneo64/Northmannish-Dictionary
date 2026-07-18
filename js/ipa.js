@@ -44,9 +44,9 @@ const ipa_dict = {
 	"j": "j",
 	"k": "k",
 	"kk": "hk",
+	"kv": "kf",
 	"l": "l",
 	"ll": "tl̥",
-	"ull": "ʊlː",
 	"-lg": "lk",
 	"m": "m",
 	"mm": "m",
@@ -102,7 +102,16 @@ const ipa_dict = {
 
 const ipa_dict_regional = {
 	"o": "ɔ",
+	"á": "ɑuː",
 	"œ": "ʌiː",
+
+	"ey": "øyː",
+	"eyrr": "øyrː",
+
+	"kv": "kf",
+	"ll": "lː",
+	"hv": "kf",
+
 	"þr-": "ðr",
 };
 
@@ -187,6 +196,8 @@ function construct_ipa(word, regional) {
 			}
 		}
 	}
+
+	if (pronunciation.endsWith("r̩")) counted_vowels++;
 
 	if (counted_vowels >= 2) pronunciation = "ˈ" + pronunciation;
 
