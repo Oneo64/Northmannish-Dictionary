@@ -13,7 +13,7 @@
 	<div id="letters" class="letterlist h2font"></div>
 	<hr>
 	<h3 id="word">Word not found</h3>
-	<h4 id="ipa" class="ipa">//</h4>
+	<p id="ipa" class="ipa">[]</p>
 	<p id="type">n/a</p>
 	<ol id="definitions" class="pfont"></ol>
 	<div id="tables"></div>
@@ -43,7 +43,15 @@
 
 		document.getElementById("title").innerHTML = "Northmannish Dictionary - " + v.charAt(0).toUpperCase() + v.substring(1);
 		document.getElementById("word").innerHTML = v;
-		document.getElementById("ipa").innerHTML = "[" + construct_ipa(v2) + "]";
+
+		var standard_ipa = construct_ipa(v2, false);
+		var regional_ipa = construct_ipa(v2, true);
+
+		document.getElementById("ipa").innerHTML = "[" + standard_ipa + "]";
+
+		if (regional_ipa != standard_ipa) {
+			document.getElementById("ipa").innerHTML = "[" + standard_ipa + "] <i><small>(standard)</small></i> | [" + regional_ipa + "] <i><small>(regional)</small></i>"
+		}
 
 		if (tags != "") {
 			document.getElementById("type").innerHTML = word_type_short_form[entry[0]] + " (" + tags + ")";

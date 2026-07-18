@@ -94,6 +94,14 @@ const ipa_dict = {
 	"engj": "eiŋc",
 	"ingj": "iŋc",
 	"yngj": "yŋc",
+
+	"þr-": "θr",
+};
+
+const ipa_dict_regional = {
+	"o": "ɔ",
+	"œ": "ʌiː",
+	"þr-": "ðr",
 };
 
 const special_ipa_constructions = {
@@ -101,7 +109,7 @@ const special_ipa_constructions = {
 	einhverr: "ˈeinkʋɛrː",
 	"einhverjir þeir": "ˈeinkʋɛrjɪr θeiːr",
 	halló: "ˈhalouː",
-	œi: "ˈɤiːjɪ"
+	œi: ["ˈɤiːjɪ", "ˈʌiːjɪ"]
 };
 
 function check_vowels(section) {
@@ -114,11 +122,29 @@ function check_vowels(section) {
 	}
 }
 
-function construct_ipa(word) {
+function get_section_ipa(section, regional) {
+	if (regional && section in ipa_dict_regional) {
+		return ipa_dict_regional[section];
+	} else {
+		return ipa_dict[section];
+	}
+}
+
+function construct_ipa(word, regional) {
 	var pronunciation = "";
 	var counted_vowels = 0;
 
-	if (word in special_ipa_constructions) return special_ipa_constructions[word];
+	if (word in special_ipa_constructions) {
+		if (special_ipa_constructions[word].constructor === Array) {
+			if (regional) {
+				return special_ipa_constructions[word][1];
+			} else {
+				return special_ipa_constructions[word][0];
+			}
+		} else {
+			return special_ipa_constructions[word];
+		}
+	}
 
 	for (var i = 0; i < word.length; i++) {
 		for (var k = word.length; k > i; k--) {
@@ -132,7 +158,7 @@ function construct_ipa(word) {
 			}
 
 			if ((i == 0 || word.charAt(i - 1) == "-") && section + "-" in ipa_dict) {
-				pronunciation += ipa_dict[section + "-"];
+				pronunciation += get_section_ipa(section + "-", regional);
 				i += section.length - 1;
 
 				if (check_vowels(section)) counted_vowels += 1;
@@ -141,7 +167,7 @@ function construct_ipa(word) {
 			}
 
 			if (k == word.length && "-" + section in ipa_dict) {
-				pronunciation += ipa_dict["-" + section];
+				pronunciation += get_section_ipa("-" + section, regional);
 				i += section.length - 1;
 
 				if (check_vowels(section)) counted_vowels += 1;
@@ -150,7 +176,7 @@ function construct_ipa(word) {
 			}
 
 			if (section in ipa_dict) {
-				pronunciation += ipa_dict[section];
+				pronunciation += get_section_ipa(section, regional);
 				i += section.length - 1;
 
 				if (check_vowels(section)) counted_vowels += 1;
