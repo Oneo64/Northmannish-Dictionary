@@ -165,6 +165,13 @@ const special_declensions = {
 		"ør", "øruna", "ørvar", "ørvarnar",
 		"ør", "ørunni", "ørvum", "ørvunum",
 		"ørvar", "ørvarinnar", "ørva", "ørvanna",
+	],
+
+	løg: [
+		"", "", "løg", "løgin",
+		"", "", "løg", "løgin",
+		"", "", "løgum", "løgunum",
+		"", "", "laga", "laganna",
 	]
 };
 

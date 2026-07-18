@@ -398,6 +398,24 @@ const verb_conjugations = {
 };
 
 const strong_verb_a_conjugations = {
+	unna: [
+		"ann", "unna",
+		"annr", "unnir",
+		"annr", "unni",
+		"ønnum", "unnum",
+		"ønnuð", "unnuð",
+		"ønnu", "unnu",
+
+		"annsk", "unnisk",
+		"annsk", "unnisk",
+		"annsk", "unnisk",
+		"ønnumsk", "unnumsk",
+		"ønnusk", "unnusk",
+		"ønnusk", "unnusk",
+
+		"ynndr", "ynnt",
+		"unnandi", "unning", "unnask"
+	],
 	binda: [
 		"bind", "batt",
 		"bindr", "bazt",
@@ -487,6 +505,24 @@ const strong_verb_a_conjugations = {
 
 		"hlæinn", "hlæið",
 		"hlæjandi", "hlæing", "hlæjask"
+	],
+	høggva: [
+		"høgg", "hjó",
+		"høggr", "hjóst",
+		"høggr", "hjó",
+		"høggvum", "hjóum",
+		"høggvuð", "hjóuð",
+		"høggvu", "hjóu",
+
+		"høggsk", "hjósk",
+		"høggsk", "hjósk",
+		"høggsk", "hjósk",
+		"høggvumsk", "hjóumsk",
+		"høggvusk", "hjóusk",
+		"høggvusk", "hjóusk",
+
+		"høggvinn", "høggvið",
+		"høggvandi", "høggving", "høggvask"
 	],
 	koma: [
 		"kem", "kom",
@@ -753,6 +789,8 @@ function analyse_verb(word) {
 	}
 
 	if ("aáoóuú".includes(vowel_chr)) stem = "a";
+	if (word.endsWith("na") && !vowels.includes(word.charAt(word.length - 3)) && !word.endsWith("nna")) stem = "a";
+	if (vowel_chr == "ø" && word.endsWith("va")) stem = "a";
 
 	return [vowel_pos, vowel_size, stem];
 }

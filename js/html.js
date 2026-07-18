@@ -77,5 +77,14 @@ const html_tables = {
 		<tr> <th>vit</th> <td id="v6"></td> <td id="v7"></td> </tr>
 		<tr> <th>þit</th> <td id="v8"></td> <td id="v9"></td> </tr>
 		<tr> <th>þeir, þær, þey</th> <td id="v10"></td> <td id="v11"></td> </tr>
-	</tbody></table>`
+	</tbody></table>`,
+
+	adjective: `<table id="adjective_declension" class="pfont"><tbody>
+		<tr> <th id="adjective_top" colspan="4">declension for...</th> </tr>
+		<tr> <th></th> <th>masculine</th> <th>feminine</th> <th>neuter</th> </tr>
+		<tr> <th>nominative</th> <td id="adj0"></td> <td id="adj1"></td> <td id="adj2"></td> </tr>
+		<tr> <th>accusative</th> <td id="adj3"></td> <td id="adj4"></td> <td id="adj5"></td> </tr>
+		<tr> <th>dative</th> <td id="adj6"></td> <td id="adj7"></td> <td id="adj8"></td> </tr>
+		<tr> <th>genitive</th> <td id="adj9"></td> <td id="adj10"></td> <td id="adj11"></td> </tr>
+	</tbody></table>`,
 };
