@@ -2405,7 +2405,7 @@ const entries = {
 	"bláð-burðinn": ["adjective", "cowardly, craven"],
 	"bláði": ["adjective", "coward, craven"],
 	"bláðr": ["adjective", "cowardly, craven (archaic, rare)"],
-	"blæða": ["verb", "to bleed (with dative \"who\")"],
+	"blæða": ["verb", "to bleed (with dative \"who\")", "", ["Mer blæðir. = I'm bleeding."]],
 	"blóa": ["verb", "to bloom, to flower", "weak verb a"],
 	"blóma": ["feminine noun", "flower, bloom"],
 	"blóma-ketill": ["masculine noun", "flowerpot"],

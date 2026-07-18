@@ -16,7 +16,8 @@
 	<p id="ipa" class="ipa">[]</p>
 	<p id="type">n/a</p>
 	<ol id="definitions" class="pfont"></ol>
-	<div id="tables"></div>
+	<div id="tables"></div>	<hr>
+	<div id="examples"><p>No examples. :(</p></div>
 	<hr>
 	<p>This conlang is under the license <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.</p>
 </div>
@@ -90,11 +91,11 @@
 		if (!tags.includes("indeclinable")) {
 			if (entry[0].endsWith("noun")) {
 				if (tags.includes("sg-only")) {
-					document.getElementById("tables").innerHTML = html_tables.noun_sg;
+					document.getElementById("tables").innerHTML = html_tables.noun_sg + "<br>";
 				} else if (tags.includes("pl-only")) {
-					document.getElementById("tables").innerHTML = html_tables.noun_pl;
+					document.getElementById("tables").innerHTML = html_tables.noun_pl + "<br>";
 				} else {
-					document.getElementById("tables").innerHTML = html_tables.noun + html_tables.noun_mobile;
+					document.getElementById("tables").innerHTML = html_tables.noun + html_tables.noun_mobile + "<br>";
 				}	
 
 				var declension = get_declension(v2, entry[0], tags);
@@ -137,7 +138,7 @@
 				var isIntransitive = entry[1].endsWith("(intransitive)") && !v3.includes(";");
 
 				if (v3.endsWith("sk")) {
-					document.getElementById("tables").innerHTML = html_tables.verb_mediopassive;
+					document.getElementById("tables").innerHTML = html_tables.verb_mediopassive + "<br>";
 
 					if (v3.endsWith("áask") && v3.substring(0, v3.length - 3) in entries) {
 						conjugation = get_conjugation(v3.substring(0, v3.length - 3), tags, tail);
@@ -148,9 +149,9 @@
 					isMediopassive = true;
 				} else {
 					if (isIntransitive) {
-						document.getElementById("tables").innerHTML = html_tables.verb;
+						document.getElementById("tables").innerHTML = html_tables.verb + "<br>";
 					} else {
-						document.getElementById("tables").innerHTML = html_tables.verb + "<br>" + html_tables.verb_mediopassive;
+						document.getElementById("tables").innerHTML = html_tables.verb + "<br>" + html_tables.verb_mediopassive + "<br>";
 					}
 				
 					conjugation = get_conjugation(v3, tags, tail);
@@ -195,6 +196,14 @@
 				for (var i = 0; i < 12; i++) {
 					document.getElementById("v" + i).innerHTML = strong_verb_a_conjugations[v2][i];
 				}
+			}
+		}
+
+		if (entry.length == 4) {
+			var examples = entry[3];
+
+			for (var i = 0; i < examples.length; i++) {
+				document.getElementById("examples").innerHTML += "<p>" + entry[3][i] + "</p>";
 			}
 		}
 	}
