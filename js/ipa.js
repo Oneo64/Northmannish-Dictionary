@@ -114,7 +114,7 @@ const ipa_dict = {
 const ipa_dict_regional = {
 	"o": "ɔ",
 	"á": "ɑuː",
-	"œ": "ʌiː",
+	"œ": "ɑiː",
 
 	"ey": "ʌɪː",
 	"eyrr": "ʌɪrː",
@@ -132,7 +132,7 @@ const special_ipa_constructions = {
 	einhverr: "ˈeinkʋɛrː",
 	"einhverjir þeir": "ˈeinkʋɛrjɪr θeiːr",
 	halló: "ˈhalouː",
-	œi: ["ˈɤiːjɪ", "ˈʌiːjɪ"]
+	œi: ["ˈɤiːjɪ", "ˈɑiːjɪ"]
 };
 
 function check_vowels(section) {
