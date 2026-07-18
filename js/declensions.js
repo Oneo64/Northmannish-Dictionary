@@ -178,6 +178,12 @@ const special_declensions = {
 		"ør", "ørunni", "ørvum", "ørvunum",
 		"ørvar", "ørvarinnar", "ørva", "ørvanna",
 	],
+	œi: [
+		"œi", "œin", "œjar", "œjarnar",
+		"œi", "œina", "œjar", "œjarnar",
+		"œi", "œinni", "œjum", "œjunum",
+		"œjar", "œjarinnar", "œja", "œjanna",
+	],
 
 	løg: [
 		"", "", "løg", "løgin",
