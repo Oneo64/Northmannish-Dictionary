@@ -79,6 +79,8 @@ const ipa_dict = {
 	"þ": "θ",
 	"ð": "ð",
 
+	"ðg": "ðg",
+
 	"ang": "aŋk",
 	"eng": "eiŋk",
 	"ing": "iŋk",
