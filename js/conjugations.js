@@ -360,7 +360,7 @@ const verb_conjugations = {
 	],
 	strong_a_atta: [
 		"á", "átta",
-		"á", "áttir",
+		"átt", "áttir",
 		"á", "átti",
 		"egum", "áttum",
 		"eguð", "áttuð",
