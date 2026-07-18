@@ -52,7 +52,7 @@ const ipa_dict = {
 	"hl": "l̥",
 	"-lg": "lk",
 	"m": "m",
-	"mm": "m",
+	"mm": "mː",
 	"mk": "m̥k",
 	"mp": "m̥p",
 	"mt": "m̥t",
