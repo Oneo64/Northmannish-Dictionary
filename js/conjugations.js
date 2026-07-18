@@ -808,6 +808,7 @@ function analyse_verb(word) {
 
 	if ("jajájojójujú".includes(vowel_chr)) stem = "a";
 	if (word.endsWith("na") && !vowels.includes(word.charAt(word.length - 3)) && !word.endsWith("nna")) stem = "a";
+	if (word.endsWith("ra") && !vowels.includes(word.charAt(word.length - 3))) stem = "a";
 	if (vowel_chr == "ø" && word.endsWith("va")) stem = "a";
 
 	return [vowel_pos, vowel_size, stem];
