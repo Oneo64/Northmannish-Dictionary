@@ -16,7 +16,7 @@ const ipa_dict = {
 
 	"æ": "aiː",
 	"ø": "œː",
-	"œ": "ɤiː",
+	"œ": "oiː",
 
 	"ei": "eiː",
 	"ey": "eyː",
@@ -132,7 +132,7 @@ const special_ipa_constructions = {
 	einhverr: "ˈeinkʋɛrː",
 	"einhverjir þeir": "ˈeinkʋɛrjɪr θeiːr",
 	halló: "ˈhalouː",
-	œi: ["ˈɤiːjɪ", "ˈɑiːjɪ"]
+	œi: ["ˈoiːjɪ", "ˈɑiːjɪ"]
 };
 
 function check_vowels(section) {
