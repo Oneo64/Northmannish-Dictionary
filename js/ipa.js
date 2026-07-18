@@ -45,7 +45,7 @@ const ipa_dict = {
 	"hj": "ȷ̊",
 	"k": "k",
 	"kk": "hk",
-	"kv": "kf",
+	"kv": "kʋ",
 	"l": "l",
 	"ll": "tl̥",
 	"hl": "l̥",
