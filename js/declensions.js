@@ -211,6 +211,53 @@ const special_declensions = {
 	]
 };
 
+const determiner_declensions = {
+	einhverr: [
+		"einhverr", "einhver", "eithvert, eithvat",
+		"einhvern", "einhverja", "eithvert, eithvat",
+		"einhverjum", "einhveri", "eithverju",
+		"einhvers", "einhverjar", "eithvers",
+
+		"einhverjir", "einhverjar", "einhver",
+		"einhverja", "einhverjar", "einhver",
+		"einhverjum", "einhverjum", "einhverjum",
+		"einhverja", "einhverja", "einhverja",
+	],
+	enginn: [
+		"enginn", "engin", "enkið",
+		"engan", "enga", "enkið",
+		"engum", "engi", "engu",
+		"enkis", "engar", "enkis",
+
+		"engir", "engar", "engin",
+		"enga", "engar", "engin",
+		"engum", "engum", "engum",
+		"enga", "enga", "enga",
+	],
+	sjalfr: [
+		"sjalfr", "sjølf", "sjalft",
+		"sjalfan", "sjalfa", "sjalft",
+		"sjølfum", "sjalfi", "sjølfu",
+		"sjalfs", "sjalfar", "sjalfs",
+
+		"sjalfir", "sjalfar", "sjølf",
+		"sjalfa", "sjalfar", "sjølf",
+		"sjølfum", "sjølfum", "sjølfum",
+		"sjalfa", "sjalfa", "sjalfa",
+	],
+	þessi: [
+		"þessi", "þessi", "þetta",
+		"þennan", "þessa", "þetta",
+		"þessum", "þessi", "þessu",
+		"þess", "þessar", "þess",
+
+		"þessir", "þessar", "þessi",
+		"þessa", "þessar", "þessi",
+		"þessum", "þessum", "þessum",
+		"þessa", "þessa", "þessa",
+	]
+};
+
 function analyse_noun(word, gender) {
 	var vowels = "aáeiíoóuúyýæøœ";
 

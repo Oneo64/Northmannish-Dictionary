@@ -89,7 +89,7 @@
 		}
 
 		if (!tags.includes("indeclinable")) {
-			if (entry[0].endsWith("noun")) {
+			if (entry[0].endsWith(" noun")) {
 				if (tags.includes("sg-only")) {
 					document.getElementById("tables").innerHTML = html_tables.noun_sg + "<br>";
 				} else if (tags.includes("pl-only")) {
@@ -195,6 +195,29 @@
 
 				for (var i = 0; i < 12; i++) {
 					document.getElementById("v" + i).innerHTML = strong_verb_a_conjugations[v2][i];
+				}
+			}
+
+			if (entry[0] == "pronoun" || entry[0] == "determiner") {
+				var personal_pronouns = ["jek", "þú", "hann", "hon", "þat", "vit", "þit", "þeir", "þær", "þey"];
+
+				if (personal_pronouns.includes(v2)) {
+					document.getElementById("tables").innerHTML = html_tables.personal_pronouns;
+				} else {
+					document.getElementById("tables").innerHTML = html_tables.adjective;
+					document.getElementById("adjective_top").innerHTML = "inflections of " + v2;
+
+					var declension = determiner_declensions[v2];
+
+					if (v2 == "eithvat") declension = determiner_declensions.einhverr;
+
+					for (var i = 0; i < 12; i++) {
+						document.getElementById("adj" + i).innerHTML = declension[i];
+					}
+
+					for (var i = 0; i < 12; i++) {
+						document.getElementById("_adj" + i).innerHTML = declension[i + 12];
+					}
 				}
 			}
 		}
