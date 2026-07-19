@@ -295,6 +295,9 @@ function analyse_noun(word, gender) {
 	if (word.endsWith("ir") && gender == "masculine noun") stem_end = word.length - 3;
 	if (word.endsWith("ari") && gender == "masculine noun") stem_end = word.length - 4;
 	if (word.endsWith("i") && gender == "masculine noun") stem_end = word.length - 2;
+
+	if (word.endsWith("all") && gender == "masculine noun") stem_end = word.length - 4;
+
 	if (word.endsWith("ttir") && gender == "feminine noun") stem_end = word.length - 3;
 	if (word.endsWith("un") && gender == "feminine noun") stem_end = word.length - 3;
 
@@ -327,6 +330,7 @@ function get_declension(word, gender, tags) {
 	var analysis = analyse_noun(word, gender);
 	var autopick = true;
 	var ir_ending = false;
+	var u_second = false;
 
 	if (word in special_declensions) return special_declensions[word];
 	if (word.includes("-") && word.substring(word.indexOf("-") + 1) in special_declensions) {
@@ -397,6 +401,7 @@ function get_declension(word, gender, tags) {
 				if (word.endsWith("all") || word.endsWith("ull") || word.endsWith("ill")) {
 					declension = noun_declensions.masculine_ll;
 					declension_size = 3;
+					u_second = true;
 				} else {
 					declension = noun_declensions.masculine_ll2;
 					declension_size = 1;
@@ -475,8 +480,14 @@ function get_declension(word, gender, tags) {
 		}
 
 		if (word.charAt(analysis[0]) == "a") {
-			if (ending.charAt(0) == "u") {
-				word2 = word2.substring(0, analysis[0]) + "ø" + word2.substring(analysis[0] + 1, word2.length);
+			if (u_second) {
+				if (ending.charAt(1) == "u") {
+					word2 = word2.substring(0, analysis[0]) + "ø" + word2.substring(analysis[0] + 1, word2.length);
+				}
+			} else {
+				if (ending.charAt(0) == "u") {
+					word2 = word2.substring(0, analysis[0]) + "ø" + word2.substring(analysis[0] + 1, word2.length);
+				}
 			}
 
 			if (Math.floor(i / 2) % 2 == 1 && i < 14 && gender == "neuter noun") {
