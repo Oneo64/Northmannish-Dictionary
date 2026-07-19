@@ -45,6 +45,7 @@ const ipa_dict = {
 	"-gn": "kn̥",
 	"h": "h",
 	"j": "j",
+	"ja": "ja",
 	"hj": "ȷ̊",
 	"k": "k",
 	"kk": "hk",
