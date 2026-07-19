@@ -108,6 +108,12 @@ const noun_declensions = {
 		"i", "inni", "jum", "junum",
 		"i", "innar", "ja", "janna",
 	],
+	feminine_ing: [
+		"", "in", "ar", "arnar",
+		"u", "una", "ar", "arnar",
+		"u", "unni", "um", "unum",
+		"ar", "arinnar", "a", "anna",
+	],
 
 	neuter_none: [
 		"", "it", "", "in",
@@ -317,6 +323,9 @@ function get_declension(word, gender, tags) {
 				declension = noun_declensions.feminine_ir;
 				declension_size = 2;
 				ir_ending = true;
+			} else if (word.endsWith("ing")) {
+				declension = noun_declensions.feminine_ing;
+				declension_size = 0;
 			} else {
 				declension = noun_declensions.feminine_none;
 				declension_size = 0;
