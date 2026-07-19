@@ -115,6 +115,7 @@ const ipa_dict = {
 	"ingj": "iŋc",
 	"yngj": "yŋc",
 
+	"-i": "ɪ",
 	"þr-": "θr",
 	"ðsl": "ðsl",
 
@@ -152,6 +153,7 @@ const ipa_dict_regional = {
 
 	"engj": "ɛŋc",
 
+	"-i": "e",
 	"þr-": "ðʀ",
 	"ðsl": "θsl",
 
