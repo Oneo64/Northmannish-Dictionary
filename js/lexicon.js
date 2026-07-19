@@ -4244,7 +4244,7 @@ const entries = {
 	"veira": ["feminine noun", "virus (biology); malware, virus, trojan"],
 	"veiða": ["verb", "to hunt, to fish (with accusative)"],
 	"vekja": ["verb", "to cause to wake (with accusative)", "strong verb b"],
-	"vel": ["adverb", "well, good (velr = better, velst = best)"],
+	"vel": ["adverb", "well, good (velr = better, velst = best)", "", ["Jek ná berjask vel. = I can fight well.", "Mer er vel. = I'm fine."]],
 	"vel-eyðinn": ["verb", "successful"],
 	"vel-kominn": ["adjective", "welcomed, gladly received (not used as a phrase!)"],
 	"Veldalfheimr": ["masculine noun", "world of the fey"],
