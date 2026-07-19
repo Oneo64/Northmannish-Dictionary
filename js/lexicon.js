@@ -2875,7 +2875,7 @@ const entries = {
 	"geypa": ["feminine noun", "lynx"],
 	"gifta": ["verb", "to give away in marriage (with accusative); to marry (with accusative \"who\" + með + dative \"with who\")", "", ["Prestrinn gifti þá. = The priest married them.", "Mek gifti með henni. = I got married with her."]],
 	"giftr": ["adjective", "married"],
-	"gjalda": ["verb", "to pay back, to repay, to tribute; to be paid by one's employer"],
+	"gjalda": ["verb", "to pay back, to repay, to tribute; to pay an employee or worker"],
 	"gjalla": ["verb", "to resonate, to make a loud and deep noise; to yell, to scream, to cry"],
 	"gjarna": ["adverb", "gladly, willingly, readily"],
 	"gjøf": ["neuter noun", "gift"],
