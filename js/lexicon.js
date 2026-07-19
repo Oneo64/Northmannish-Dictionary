@@ -2264,7 +2264,6 @@ const entry_words = [
 	"œx",
 	"œða",
 	"œðla",
-
 ];
 
 const entries = {
