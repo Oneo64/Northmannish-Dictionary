@@ -4286,7 +4286,7 @@ const entries = {
 	"yfir-skeg": ["neuter noun", "mustache"],
 	"ynnd-ligr": ["adjective", "lovely, adorable"],
 	"ynndr": ["adjective", "adored"],
-	"á ... máta": ["adverb", "in a ... way (with accusative adjective)", "strong verb a"],
+	"á ... máta": ["adverb", "in a ... way (with accusative adjective)", "", ["Hann þýddi þat á skýjan máta. = He explained it in a clear way."]],
 	"á": ["preposition", "on (with dative)"],
 	"á-glapplega": ["neuter noun", "accidentally"],
 	"á-kalla": ["verb", "to invoke, to provoke, to rouse, to stir"],
