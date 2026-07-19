@@ -212,6 +212,17 @@ const special_declensions = {
 };
 
 const determiner_declensions = {
+	báðir: [
+		"x", "x", "x",
+		"x", "x", "x",
+		"x", "x", "x",
+		"x", "x", "x",
+
+		"báðir", "báðar", "báðu",
+		"báða", "báðar", "báðu",
+		"báðum", "báðum", "báðum",
+		"báða", "báða", "báða",
+	],
 	einhverr: [
 		"einhverr", "einhver", "eithvert, eithvat",
 		"einhvern", "einhverja", "eithvert, eithvat",
