@@ -71,6 +71,12 @@ const noun_declensions = {
 		"i", "inum", "um", "unum",
 		"s", "sins", "a", "anna",
 	],
+	masculine_andi: [
+		"andi", "andinn", "endr", "endrnir",
+		"anda", "andann", "endr", "endrna",
+		"anda", "andanum", "øndum", "øndunum",
+		"anda", "andans", "anda", "andanna",
+	],
 
 	feminine_a: [
 		"a", "an", "ur", "urnar",
@@ -367,6 +373,9 @@ function get_declension(word, gender, tags) {
 				}
 
 				declension_size = 1;
+			} else if (word.endsWith("andi") && word != "grandi") {
+				declension = noun_declensions.masculine_andi;
+				declension_size = 4;
 			} else if (word.endsWith("i")) {
 				declension = noun_declensions.masculine_i;
 				declension_size = 1;
