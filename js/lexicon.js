@@ -4409,7 +4409,7 @@ const entries = {
 	"ó-hreinn": ["adjective", "unclean, soiled, dirty, impure"],
 	"ó-huggligr": ["adjective", "uncomfortable"],
 	"ó-kunnigr": ["adjective", "unfamiliar, unacquainted"],
-	"ó-líktr": ["adjective", "different"],
+	"ó-líktr": ["adjective", "different, unlike"],
 	"ó-røð": ["feminine noun", "chaos, mess"],
 	"ó-skapr": ["adjective", "unwise, foolish"],
 	"ó-skýr": ["adjective", "dull, foggy, clouded (in thought); unclear, vague (in idea); unreadable, unintelligable (in speech)"],
