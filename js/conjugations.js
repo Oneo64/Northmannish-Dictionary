@@ -1000,7 +1000,7 @@ function get_conjugation(word, tags, tail) {
 		if (ending.includes("-")) ending_true = ending.substring(ending.indexOf("-") + 1, ending.length);
 
 		if (word.endsWith("ja") && !weak_a && !no_j_insert) {
-			if (i == 6 || i == 8 || i == 10) {
+			if (i == 6 || i == 8 || i == 10 || i == 18 || i == 20 || i == 22) {
 				ending_true = "j" + ending_true;
 			}
 		}
