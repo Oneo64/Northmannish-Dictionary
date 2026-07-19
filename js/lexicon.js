@@ -3667,7 +3667,7 @@ const entries = {
 	"regna": ["verb", "to rain (intransitive)"],
 	"reim": ["feminine noun", "strip of material; strap, belt"],
 	"reka": ["feminine noun", "shovel"],
-	"renna": ["verb", "to run (intransitive); to melt something (transitive); to run in, to rush into, to invade (intransitive or with inn + accusative)", "strong verb b"],
+	"renna": ["verb", "to run, to sprint (intransitive); to melt something (transitive); to run into, to invade (intransitive or with inn + accusative)", "strong verb b"],
 	"repsa": ["verb", "to punish (with dative)"],
 	"repsun": ["feminine noun", "punishment"],
 	"rettr": ["adjective", "correct, right"],
