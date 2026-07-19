@@ -916,6 +916,8 @@ const entry_words = [
 	"inn-lendingi",
 	"inn-lendr",
 	"inn-lifinn",
+	"inn-renna",
+	"inn-rás",
 	"inni",
 	"jaki",
 	"japn",
@@ -1446,6 +1448,8 @@ const entry_words = [
 	"rykkjask",
 	"rán",
 	"rár",
+	"rás",
+	"ráð",
 	"ráða",
 	"ræfill",
 	"ræka",
@@ -2260,6 +2264,7 @@ const entry_words = [
 	"œx",
 	"œða",
 	"œðla",
+
 ];
 
 const entries = {
@@ -2722,8 +2727,8 @@ const entries = {
 	"fill": ["neuter noun", "fillet, a piece of boneless meat cut from the animal"],
 	"fimm": ["number", "five", "indeclinable"],
 	"fingr": ["masculine noun", "finger", "masculine none"],
-	"finna": ["verb", "to find", "strong verb b"],
 	"finna kerski": ["verb", "to enjoy doing something, to like doing something (with dative \"who\" + clause \"doing what\")", "strong verb b", ["Mer finn kerski at eta hunang. = I like to eat honey."]],
+	"finna": ["verb", "to find", "strong verb b"],
 	"fisk-hryggr": ["masculine noun", "fish spine"],
 	"fiskr": ["masculine noun", "fish"],
 	"fjall": ["neuter noun", "mountain"],
@@ -3160,6 +3165,8 @@ const entries = {
 	"inn-lendingi": ["masculine noun", "native, aboriginal, tribesman"],
 	"inn-lendr": ["adjective", "native, aboriginal"],
 	"inn-lifinn": ["adjective", "introverted"],
+	"inn-renna": ["verb", "to invade (intransitive or with accusative)", "strong verb b"],
+	"inn-rás": ["feminine noun", "invasion"],
 	"inni": ["preposition", "inside"],
 	"jaki": ["masculine noun", "broken ice"],
 	"japn": ["adjective", "same, equal (in numbers)"],
@@ -3690,6 +3697,8 @@ const entries = {
 	"rykkjask": ["verb", "to twitch, to flinch"],
 	"rán": ["neuter noun", "raid, pillaging, plundering"],
 	"rár": ["phrase", "the growling or roaring of a beast; \"grrr\", \"rawr\""],
+	"rás": ["feminine noun", "run, running"],
+	"ráð": ["neuter noun", "advice, counsel"],
 	"ráða": ["verb", "to advise, to counsel (with dative \"who\" + accusative or infinitive \"on what\"); to employ, to hire (with accusative)"],
 	"ræfill": ["masculine noun", "rogue, scoundrel, rascal"],
 	"ræka": ["verb", "to argue, to debate, to speak one's opinions", "weak verb a"],
