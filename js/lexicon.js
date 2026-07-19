@@ -4047,7 +4047,7 @@ const entries = {
 	"sítróna": ["feminine noun", "lemon"],
 	"síðan lengu": ["adverb", "since a while ago, for a long time, for a long while"],
 	"síðan": ["adverb", "since, after a past time (with accusative)"],
-	"síðastr": ["adjective", "last", "", ["Vit fórum til strandarinnar í síðustu viku. = We went to the beach last week.", "Síðasti eftirlifandinn = The last survivor"]],
+	"síðastr": ["adjective", "last", "", ["Hverr er síðasti í røðunni? = Who's last in line?", "Vit fórum til strandarinnar í síðustu viku. = We went to the beach last week.", "Síðasti eftirlifandinn = The last survivor"]],
 	"sófi": ["feminine noun", "sofa, couch"],
 	"sól": ["feminine noun", "sun"],
 	"sólar-ljús": ["neuter noun", "sunlight"],
