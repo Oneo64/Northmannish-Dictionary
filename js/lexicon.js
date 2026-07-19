@@ -2720,7 +2720,7 @@ const entries = {
 	"fimm": ["number", "five", "indeclinable"],
 	"fingr": ["masculine noun", "finger", "masculine none"],
 	"finna": ["verb", "to find", "strong verb b"],
-	"finna kerski": ["verb", "to enjoy doing (with dative \"who\" + clause \"doing what\")", "strong verb b", ["Mer finn kerski at eta hunang. = I like to eat honey."]],
+	"finna kerski": ["verb", "to enjoy doing something, to like doing something (with dative \"who\" + clause \"doing what\")", "strong verb b", ["Mer finn kerski at eta hunang. = I like to eat honey."]],
 	"fisk-hryggr": ["masculine noun", "fish spine"],
 	"fiskr": ["masculine noun", "fish"],
 	"fjall": ["neuter noun", "mountain"],
