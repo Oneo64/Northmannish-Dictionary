@@ -71,11 +71,18 @@ const noun_declensions = {
 		"i", "inum", "um", "unum",
 		"s", "sins", "a", "anna",
 	],
+
 	masculine_andi: [
 		"andi", "andinn", "endr", "endrnir",
 		"anda", "andann", "endr", "endrna",
 		"anda", "andanum", "øndum", "øndunum",
 		"anda", "andans", "anda", "andanna",
+	],
+	masculine_ari: [
+		"ari", "arinn", "arar", "ararnir",
+		"ara", "arann", "ara", "arana",
+		"ara", "aranum", "urum", "urunum",
+		"ara", "arans", "ara", "aranna",
 	],
 
 	feminine_a: [
@@ -286,6 +293,8 @@ function analyse_noun(word, gender) {
 	var stem_end = word.length - 2;
 
 	if (word.endsWith("ir") && gender == "masculine noun") stem_end = word.length - 3;
+	if (word.endsWith("ari") && gender == "masculine noun") stem_end = word.length - 4;
+	if (word.endsWith("i") && gender == "masculine noun") stem_end = word.length - 2;
 	if (word.endsWith("ttir") && gender == "feminine noun") stem_end = word.length - 3;
 	if (word.endsWith("un") && gender == "feminine noun") stem_end = word.length - 3;
 
@@ -373,12 +382,17 @@ function get_declension(word, gender, tags) {
 				}
 
 				declension_size = 1;
-			} else if (word.endsWith("andi") && word != "grandi") {
-				declension = noun_declensions.masculine_andi;
-				declension_size = 4;
 			} else if (word.endsWith("i")) {
-				declension = noun_declensions.masculine_i;
-				declension_size = 1;
+				if (word.endsWith("andi") && word != "grandi") {
+					declension = noun_declensions.masculine_andi;
+					declension_size = 4;
+				} else if (word.endsWith("ari") && word != "skari" && word != "kross-fari") {
+					declension = noun_declensions.masculine_ari;
+					declension_size = 3;
+				} else {
+					declension = noun_declensions.masculine_i;
+					declension_size = 1;
+				}
 			} else if (word.endsWith("ll")) {
 				if (word.endsWith("all") || word.endsWith("ull") || word.endsWith("ill")) {
 					declension = noun_declensions.masculine_ll;
