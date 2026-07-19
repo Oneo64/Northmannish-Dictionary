@@ -127,6 +127,7 @@ const ipa_dict_regional = {
 
 	"kv": "kf",
 	"ll": "lː",
+	"-ll": "lː",
 	"hv": "kf",
 
 	"þr-": "ðr",
