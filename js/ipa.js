@@ -123,21 +123,32 @@ const ipa_dict_regional = {
 	"œ": "ɑiː",
 
 	"ey": "ʌɪː",
-	"eyrr": "ʌɪrː",
+	"eirr": "eiʀː",
+	"eyrr": "ʌɪʀː",
 
+	"ð": "d",
+	"hv": "kf",
 	"kv": "kf",
 	"ll": "lː",
 	"-ll": "lː",
-	"hv": "kf",
+	"r": "ʀ",
+	"rr": "ʀː",
+	"hr": "ʀ̥",
+	"rk": "ʀ̥k",
+	"rp": "ʀ̥p",
+	"rt": "ʀ̥t",
 
-	"þr-": "ðr",
+	"þr-": "ðʀ",
 	"ðsl": "θsl",
+
+	"-r": "ʀ",
+	"r_ending": "ʀ̩",
 };
 
 const special_ipa_constructions = {
 	einn: "einnː",
-	einhverr: "ˈeinkʋɛrː",
-	"einhverjir þeir": "ˈeinkʋɛrjɪr θeiːr",
+	einhverr: ["ˈeinkʋɛrː", "ˈeinkʋɛʀː"],
+	"einhverjir þeir": ["ˈeinkʋɛrjɪr θeiːr", "ˈeinkʋɛʀjɪʀ θeiːʀ"],
 	halló: "ˈhalouː",
 	œi: ["ˈɤiːjɪ", "ˈɑiːjɪ"]
 };
@@ -224,7 +235,7 @@ function construct_ipa(word, regional) {
 		}
 	}
 
-	if (pronunciation.endsWith("r̩")) counted_vowels++;
+	if (pronunciation.endsWith("r̩") || pronunciation.endsWith("ʀ̩")) counted_vowels++;
 
 	if (counted_vowels >= 2) pronunciation = "ˈ" + pronunciation;
 
