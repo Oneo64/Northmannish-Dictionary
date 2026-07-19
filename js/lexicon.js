@@ -3114,7 +3114,7 @@ const entries = {
 	"hverr": ["question word", "which, who"],
 	"hvika": ["verb", "to quail, to shiver, to cower, to shrink (intransitive)"],
 	"hvikari": ["masculine noun", "coward"],
-	"hvort": ["masculine noun", "whether"],
+	"hvort": ["conjunction", "whether, either"],
 	"hví": ["question word", "why"],
 	"hvíld": ["feminine noun", "rest, break, paise"],
 	"hvíldar-leyss": ["adjective", "persistent, unyielding, relentless, restless, constant, stubborn"],
