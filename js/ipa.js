@@ -98,19 +98,18 @@ const ipa_dict = {
 
 	"ðg": "ðg",
 
-	"ang": "aŋk",
-	"eng": "eiŋk",
-	"ing": "iŋk",
-	"ung": "uŋk",
-	"yng": "yŋk",
-	"øng": "œŋk",
-
-	"angr": "aŋgr̩",
-	"engr": "eiŋgr̩",
-	"ingr": "iŋgr̩",
-	"ungr": "uŋgr̩",
-	"yngr": "yŋgr̩",
-	"øngr": "œŋgr̩",
+	"ang": "aŋg",
+	"eng": "eiŋg",
+	"ing": "iŋg",
+	"ung": "uŋg",
+	"yng": "yŋg",
+	"øng": "œŋg",
+	"-ang": "aŋk",
+	"-eng": "eiŋk",
+	"-ing": "iŋk",
+	"-ung": "uŋk",
+	"-yng": "yŋk",
+	"-øng": "œŋk",
 
 	"engj": "eiŋc",
 	"ingj": "iŋc",
@@ -144,6 +143,11 @@ const ipa_dict_regional = {
 	"rk": "ʀ̥k",
 	"rp": "ʀ̥p",
 	"rt": "ʀ̥t",
+
+	"eng": "ɛŋg",
+	"-eng": "ɛŋk",
+
+	"engj": "ɛŋc",
 
 	"þr-": "ðʀ",
 	"ðsl": "θsl",
