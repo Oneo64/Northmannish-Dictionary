@@ -4103,7 +4103,7 @@ const entries = {
 	"takka-borð": ["neuter noun", "keyboard"],
 	"takki": ["masculine noun", "button, push button; a key on a computer keyboard"],
 	"tal": ["neuter noun", "speech, talking"],
-	"tala": ["verb", "to talk, to speak"],
+	"tala": ["verb", "to talk, to speak (intransitive); to talk to (with með + dative); to speak a language (with accusative)"],
 	"tala-fræði": ["neuter noun", "mathematics", "sg-only"],
 	"talari": ["masculine noun", "microphone (electronics); reader, interpreter (electronics)"],
 	"tamr": ["adjective", "tame, not wild; obedient, docile, disciplined"],
