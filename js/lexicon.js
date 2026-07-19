@@ -4482,7 +4482,7 @@ const entries = {
 	"þveit": ["feminine noun", "glade, forest clearing"],
 	"þvinga": ["verb", "to oppress, to wield power over (with accusative)", "weak verb a"],
 	"þvá": ["verb", "to wash", "strong verb c"],
-	"þykkja": ["verb", "to be known for, to be considered, to be regarded as (with sem + nominative)", "", ["Ávextir þykkju sem góðir matar."]],
+	"þykkja": ["verb", "to be known for, to be considered, to be regarded as (with sem + nominative)", "", ["Ávextir þykkju sem góðir matar. = Fruit is considered healthy food.", "Jek þykk sem góðr læknir. = I am regarded as a good doctor."]],
 	"þyngja": ["verb", "to weigh (with accusative)"],
 	"þynja": ["adverb", "to numb, to go numb (intransitive)"],
 	"þynjandi": ["adjective", "numbing", "indeclinable"],
