@@ -2797,7 +2797,7 @@ const entries = {
 	"gamal-dags": ["adjective", "old-fashioned, traditional", "indeclinable"],
 	"gamall": ["adjective", "old, aged (for living things) (eldri = comparative, eldstr = superlative)"],
 	"gang-vegr": ["masculine noun", "hallway, corridor, passage"],
-	"ganga": ["verb", "to walk", "strong verb c"],
+	"ganga": ["verb", "to walk (intransitive); to join (with í + accusative)", "strong verb c"],
 	"gangr": ["masculine noun", "walk, stroll; movement, step"],
 	"garp-leiki": ["masculine noun", "bravery, courage"],
 	"garpr": ["adjective", "brave, courageous"],
