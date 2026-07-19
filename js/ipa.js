@@ -226,7 +226,7 @@ function construct_ipa(word, regional) {
 				break;
 			}
 
-			if (k == word2.length && "-" + section in ipa_dict) {
+			if ((k == word2.length || word2.charAt(i + 1) == "-") && "-" + section in ipa_dict) {
 				if (section == "r" && !vowels.includes(word2.charAt(i - 1))) {
 					pronunciation += get_section_ipa("r_ending", regional);
 				} else {
