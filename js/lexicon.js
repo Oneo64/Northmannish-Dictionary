@@ -2879,7 +2879,7 @@ const entries = {
 	"gjalla": ["verb", "to resonate, to make a loud and deep noise; to yell, to scream, to cry"],
 	"gjarna": ["adverb", "gladly, willingly, readily"],
 	"gjøf": ["neuter noun", "gift"],
-	"gjøldun": ["feminine noun", "wage, salary (earnings from work)"],
+	"gjøldun": ["feminine noun", "payment, tribute; wage, salary (earnings from work)"],
 	"gjølnar": ["masculine noun", "gills (of fish)", "pl-only"],
 	"gjúsa": ["verb", "to erupt, to explode (intransitive)", "strong verb f"],
 	"gjúta": ["verb", "to spawn, to burst open with children (intransitive)", "strong verb f"],
