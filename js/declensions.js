@@ -1,21 +1,15 @@
 const noun_declensions = {
 	masculine_a_stem: [
-		"r", "rinn", "ar", "arnir",
+		"_", "_inn", "ar", "arnir",
 		"", "inn", "a", "ana",
 		"i", "inum", "um", "unum",
 		"s", "sins", "a", "anna",
 	],
 	masculine_i_stem: [
-		"r", "rinn", "e-ir", "e-irnir",
+		"_", "_inn", "e-ir", "e-irnir",
 		"", "inn", "e-i", "e-ina",
 		"e-i", "e-inum", "um", "unum",
 		"a-ar", "a-arins", "a-a", "a-anna",
-	],
-	masculine_nn: [
-		"n", "ninn", "ar", "arnir",
-		"", "inn", "a", "ana",
-		"i", "inum", "um", "unum",
-		"s", "sins", "a", "anna",
 	],
 	masculine_ll: [
 		"_ll", "_llinn", "lar", "larnir",
@@ -27,6 +21,12 @@ const noun_declensions = {
 		"l", "linn", "ar", "arnir",
 		"", "inn", "a", "ana",
 		"", "inum", "um", "unum",
+		"s", "sins", "a", "anna",
+	],
+	masculine_nn: [
+		"n", "ninn", "ar", "arnir",
+		"", "inn", "a", "ana",
+		"i", "inum", "um", "unum",
 		"s", "sins", "a", "anna",
 	],
 	masculine_rr: [
@@ -274,7 +274,7 @@ function get_declension(word, gender, tags) {
 			} else if (word.endsWith("rr")) {
 				declension = noun_declensions.masculine_rr;
 				declension_size = 1;
-			} else if (word.endsWith("r")) {
+			} else if (word.endsWith("r") || word.endsWith("ss")) {
 				if (analysis[2] == "a") {
 					declension = noun_declensions.masculine_a_stem;
 				} else {
