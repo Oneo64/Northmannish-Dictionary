@@ -3743,7 +3743,7 @@ const entries = {
 	"self-trúandi": ["adjective", "dignified, self-respectable", "indeclinable"],
 	"self-virkandi": ["adjective", "automatic", "indeclinable"],
 	"selja": ["verb", "to sell something"],
-	"sem": ["conjunction", "which, who, whom; like, such as", "", ["Hann var sem goð millum manna. = He was like a god amongst men.", "Hví gengr þú sem þat? = Why are you walking like that?"]],
+	"sem": ["conjunction", "which, who, whom; like, such as", "", ["Hár hannar var hvítt sem snær. = Her hair was white as snow.", "Hann var sem goð millum manna. = He was like a god amongst men.", "Hví gengr þú sem þat? = Why are you walking like that?"]],
 	"senda inn til": ["verb", "to submit something (with accusative \"what\" + inn til + genitive \"to whom\")"],
 	"senda": ["verb", "to send"],
 	"ser-stakr": ["adjective", "special, incomparable, unmatchable, unique, one-of-a-kind"],
