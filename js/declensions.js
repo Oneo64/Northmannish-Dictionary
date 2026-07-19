@@ -314,6 +314,15 @@ function get_declension(word, gender, tags) {
 	var ir_ending = false;
 
 	if (word in special_declensions) return special_declensions[word];
+	if (word.includes("-") && word.substring(word.indexOf("-") + 1) in special_declensions) {
+		var declension2 = special_declensions[word.substring(word.indexOf("-") + 1)];
+
+		for (var i = 0; i < 16; i++) {
+			declension2[i] = word.substring(0, word.indexOf("-")) + declension2[i];
+		}
+
+		return declension2;
+	}
 
 	if (tags.includes("masculine none")) {
 		declension = noun_declensions.masculine_none;
