@@ -951,7 +951,13 @@ function get_conjugation(word, tags, tail) {
 				if (word.endsWith("ra") || word.endsWith("rja")) conjugation = verb_conjugations.weak_dh2_i;
 				if (word.endsWith("ba") || word.endsWith("bja")) conjugation = verb_conjugations.weak_dh2_i;
 
-				if (word.endsWith("la") || word.endsWith("lja")) conjugation = verb_conjugations.weak_d_i;
+				if (word.endsWith("la") || word.endsWith("lja")) {
+					if (word.endsWith("lla")) {
+						conjugation = verb_conjugations.weak_t_i;
+					} else {
+						conjugation = verb_conjugations.weak_d_i;
+					}
+				}
 
 				if (word.endsWith("eyja")) {
 					conjugation = verb_conjugations.weak_eyja;
