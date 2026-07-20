@@ -3607,7 +3607,7 @@ const entries = {
 	"mykja": ["feminine noun", "mud, soil, manure, dung, excrement", "sg-only"],
 	"mylja": ["verb", "to grind, to mill"],
 	"mynd": ["feminine noun", "shape, form; image, figure; silhouette"],
-	"mynd-ligr": ["adjective", "handsome, good-looking (of men and women); perfect, ideal, flawless (of objects)", "", ["Þú ert myndlegt í dag! = You look great today!", "Eldr er myndlegt vapn gagn úlfa. = Fire is the perfect weapon against wolves."]],
+	"mynd-ligr": ["adjective", "handsome, good-looking (of men and women); perfect, ideal, flawless (of objects)", "", ["Þú ert myndligt í dag! = You look great today!", "Eldr er myndligt vapn gagn úlfa. = Fire is the perfect weapon against wolves."]],
 	"myndja": ["verb", "to form, to mould, to model (with accusative)", "weak verb b"],
 	"myndjask": ["verb", "to materialise, to appear", "weak verb b"],
 	"mynt": ["neuter noun", "coin, penny"],
