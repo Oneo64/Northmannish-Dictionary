@@ -56,7 +56,6 @@ const ipa_dict = {
 	"kv": "kʋ",
 	"l": "l",
 	"hl": "l̥",
-	"lg": "lg",
 	"ll": "tl̥",
 	"-lg": "lk",
 	"m": "m",
@@ -98,8 +97,9 @@ const ipa_dict = {
 	"p-": "pʰ",
 	"t-": "tʰ",
 
-	"ðg": "ðg",
+	"lg": "lg",
 	"rg": "rg",
+	"ðg": "ðg",
 
 	"ang": "aŋg",
 	"eng": "eiŋg",
