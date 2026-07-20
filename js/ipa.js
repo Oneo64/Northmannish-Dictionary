@@ -171,7 +171,8 @@ const special_ipa_constructions = {
 	einhverr: ["ˈeinkʋɛrː", "ˈeinkʋɛʀː"],
 	"einhverjir þeir": ["ˈeinkʋɛrjɪr θeiːr", "ˈeinkʋɛʀjɪʀ θeiːʀ"],
 	halló: "ˈhalouː",
-	œi: ["ˈɤiːjɪ", "ˈɑiːjɪ"]
+	œi: ["ˈɤiːjɪ", "ˈɑiːjɪ"],
+	hœi: ["ˈhɤiːjɪ", "ˈhɑiːjɪ"]
 };
 
 function check_vowels(section) {
