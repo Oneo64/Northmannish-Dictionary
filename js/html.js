@@ -55,6 +55,9 @@ const html_tables = {
 		<tr> <th>þit</th> <td id="v8"></td> <td id="v9"></td> </tr>
 		<tr> <th>þeir, þær, þey</th> <td id="v10"></td> <td id="v11"></td> </tr>
 		<tr> <th>gerund</th> <td id="gerund" colspan="2"></td> </tr>
+		<tr> <th></th> <th colspan="2">imperative</th> </tr>
+		<tr> <th>singular</th> <td id="imperative_sg" colspan="2"></td> </tr>
+		<tr> <th>plural</th> <td id="imperative_pl" colspan="2"></td> </tr>
 	</tbody></table>`,
 	verb_mediopassive: `<table id="mediopassive_declension" class="pfont"><tbody>
 		<tr> <th id="mediopassive_top" colspan="3">conjugation for...</th> </tr>

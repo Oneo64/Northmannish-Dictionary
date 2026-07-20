@@ -1041,6 +1041,9 @@ function get_conjugation(word, tags, tail) {
 		word_forms.push(word.substring(0, word.length - 1) + "ask" + tail);
 	}
 
+	word_forms.push(word + "þu" + tail);
+	word_forms.push(word + "þit" + tail);
+
 	for (var i = 0; i < word_forms.length; i++) {
 		word_forms[i] = word_forms[i].replaceAll("-", "");
 	}
