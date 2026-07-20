@@ -2735,7 +2735,7 @@ const entries = {
 	"erja": ["verb", "to plow, to plough, to till"],
 	"ermr": ["masculine noun", "sleeve"],
 	"Esrelu-veldi": ["masculine noun", "Esrela (a kingdom in Myrkjørð)"],
-	"ess": ["conjunction", "when, whenever (not a question word)"],
+	"ess": ["conjunction", "when, whenever (not a question word)", "", ["Ok ess dó hann, grátu øllu vrøldin. = And when he died, the whole world cried."]],
 	"eta": ["verb", "to eat, to consume", "strong verb b"],
 	"eyga": ["neuter noun", "eye (anatomy)"],
 	"eyli": ["masculine noun", "fool, simpleton, blockhead"],
