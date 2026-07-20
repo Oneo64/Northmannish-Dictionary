@@ -148,6 +148,11 @@ const ipa_dict_regional = {
 	"rp": "ʀ̥p",
 	"rt": "ʀ̥t",
 
+	"-gl": "kɨl",
+	"-gn": "kɨn",
+	"-pl": "pɨl",
+	"-pn": "pɨn",
+
 	"eng": "ɛŋg",
 	"-eng": "ɛŋk",
 
