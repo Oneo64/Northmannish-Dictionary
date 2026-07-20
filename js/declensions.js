@@ -313,10 +313,22 @@ const determiner_declensions = {
 		"sína", "sínar", "sín",
 		"sínum", "sínum", "sínum",
 		"sína", "sína", "sína",
+	],
+
+	annarr: [
+		"annarr", "ønnur", "annat",
+		"annan", "aðra", "annat",
+		"øðrum", "aðri", "øðru",
+		"annars", "aðrar", "annars",
+
+		"aðrir", "aðrar", "ønnur",
+		"aðra", "aðrar", "ønnur",
+		"øðrum", "øðrum", "øðrum",
+		"aðra", "aðra", "aðra",
 	]
 };
 
-function analyse_noun(word, gender) {
+function analyse_noun(word, gender, tags) {
 	var vowels = "aáeiíoóuúyýæøœ";
 
 	var vowel_pos = 0;
@@ -325,6 +337,8 @@ function analyse_noun(word, gender) {
 	var stem = "i";
 
 	var stem_end = word.length - 2;
+
+	if (tags.includes("pl-only") && gender == "masculine noun") stem_end = word.length - 3;
 
 	if (word.endsWith("ir") && gender == "masculine noun") stem_end = word.length - 3;
 	if (word.endsWith("i") && gender == "masculine noun") stem_end = word.length - 2;
@@ -360,7 +374,7 @@ function analyse_noun(word, gender) {
 function get_declension(word, gender, tags) {
 	var declension = [];
 	var declension_size = 0;
-	var analysis = analyse_noun(word, gender);
+	var analysis = analyse_noun(word, gender, tags);
 	var autopick = true;
 	var ir_ending = false;
 	var u_second = false;

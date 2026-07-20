@@ -200,6 +200,21 @@
 				}
 			}
 
+			if (entry[0] == "adjective" && v2 in determiner_declensions) {
+				document.getElementById("tables").innerHTML = html_tables.adjective + "<br>";
+				document.getElementById("adjective_top").innerHTML = "inflections of " + v2;
+
+				var declension = determiner_declensions[v2];
+
+				for (var i = 0; i < 12; i++) {
+					document.getElementById("adj" + i).innerHTML = declension[i];
+				}
+
+				for (var i = 0; i < 12; i++) {
+					document.getElementById("_adj" + i).innerHTML = declension[i + 12];
+				}
+			}
+
 			if (entry[0] == "pronoun" || entry[0] == "determiner") {
 				var personal_pronouns = ["jek", "þú", "hann", "hon", "þat", "vit", "þit", "þeir", "þær", "þey", "minn", "þinn", "sinn", "sú"];
 				var both = (v2 == "minn" || v2 == "þinn" || v2 == "sinn");
