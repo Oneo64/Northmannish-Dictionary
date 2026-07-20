@@ -155,8 +155,8 @@ const noun_declensions = {
 	neuter_i: [
 		"i", "it", "i", "in",
 		"i", "it", "i", "in",
-		"i", "inu", "jum", "junum",
-		"is", "isins", "ja", "janna",
+		"i", "inu", "um", "unum",
+		"is", "isins", "a", "anna",
 	],
 };
 
