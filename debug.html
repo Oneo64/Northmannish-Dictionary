@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title id="title">debug</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="icon" type="image/x-icon" href="images/favicon.png">
+</head>
+<body>
+	<textarea id="in">
+	</textarea>
+	<button id="button">debug</button>
+	<button id="button2">statistics</button>
+	<button id="button3">loanword statistics</button>
+	<button id="button4">letter frequency</button>
+	<button id="button5">letter frequency (merged)</button>
+	<button id="button6">process into json</button>
+	<div id="out">
+	</div>
+
+<script src="js/lexicon.js"></script>
+<script src="js/ipa.js"></script>
+
+<script>
+	function checkwords() {
+		var texts = document.getElementById("in").value.split("\n");
+
+		document.getElementById("out").innerHTML = "";
+
+		for (var i = 0; i < texts.length; i++) {
+			var word = texts[i];
+
+			if (!entry_words.includes(word)) {
+				document.getElementById("out").innerHTML += "<div>" + word + " is not in the online dictionary</div>";
+			}
+		}
+
+		for (var i = 0; i < entry_words.length; i++) {
+			var word = entry_words[i];
+
+			if (!texts.includes(word)) {
+				document.getElementById("out").innerHTML += "<div>" + word + " is not in the input</div>";
+			}
+		}
+	}
+
+	function dostatistics() {
+		document.getElementById("out").innerHTML = "";
+
+		var stats = {
+			"proto-indo-european": 0,
+			"proto-germanic": 0,
+			"proto-norse": 0,
+			"old-norse": 0,
+			"old-english": 0,
+			"classical-latin": 0,
+			"modern-icelandic": 0,
+			"modern-scandinavian": 0,
+			"modern-western-germanic": 0,
+			"modern-celtic": 0,
+			"indo-aryan": 0,
+			"norvunic": 0,
+			"kagalarian": 0,
+			"middle-english": 0,
+			"english": 0,
+			"archaic-form": 0,
+			"poetic-form": 0,
+			"evolved": 0,
+			"hypothetical": 0,
+			"deceptive": 0,
+			"fictional": 0,
+			"unsure": 0
+		};
+
+		var totalTags = 0;
+
+		for (var i = 0; i < entry_words.length; i++) {
+			var word = entry_words[i];
+
+			if (word in entries && entries[word].length > 2 && entries[word][2]) {
+				var tags = entries[word][2].split(" ");
+
+				for (var i2 = 0; i2 < tags.length; i2++) {
+					if (tags[i2] != "no-declension") {
+						stats[tags[i2]]++;
+						totalTags++;
+					}
+				}
+			}
+		}
+
+		document.getElementById("out").innerHTML += "<div>total tags: " + totalTags + "</div>";
+
+		var keys = Object.keys(stats);
+
+		for (var i = 0; i < keys.length; i++) {
+			document.getElementById("out").innerHTML += "<div>" + keys[i] + ": " + (Math.round((stats[keys[i]] / totalTags) * 10000) / 100) + "%</div>";
+		}
+	}
+
+	function doloanwordstatistics() {
+		document.getElementById("out").innerHTML = "";
+
+		var words_counted = 0;
+		var loans = 0;
+		var notFictional = 0;
+
+		for (var i = 0; i < entry_words.length; i++) {
+			var word = entry_words[i];
+
+			if (word in entries && entries[word].length > 2 && entries[word][2]) {
+				var tags = entries[word][2].split(" ");
+				var isLoan = false;
+				var isNotFictional = false;
+
+				for (var i2 = 0; i2 < tags.length; i2++) {
+					if (loanword_tags.includes(tags[i2])) isLoan = true;
+					if (foreign_tags.includes(tags[i2])) isNotFictional = true;
+
+					if (isLoan && isNotFictional) break;
+				}
+
+				if (isLoan) loans++;
+				if (isNotFictional && !tags.includes("evolved") && !tags.includes("deceptive") && !tags.includes("hypothetical")) notFictional++;
+
+				words_counted++;
+			}
+		}
+
+		document.getElementById("out").innerHTML += "<div>total tags: " + words_counted + "</div>";
+		document.getElementById("out").innerHTML += "<div>loan words: " + loans + " loans, which are " + (Math.round((loans / words_counted) * 10000) / 100) + "% of tagged words</div>";
+		document.getElementById("out").innerHTML += "<div>not fictional: " + (Math.round((notFictional / words_counted) * 10000) / 100) + "% of tagged words</div>";
+	}
+
+	function letterfreq(mergeLetters) {
+		document.getElementById("out").innerHTML = "";
+
+		var stats = {};
+		var letters = [];
+		var totalTags = 0;
+
+		for (var i = 0; i < entry_words.length; i++) {
+			var word = entry_words[i];
+
+			if (word in entries) {
+				for (var i2 = 0; i2 < word.length; i2++) {
+					var letter = word.charAt(i2).toLowerCase();
+
+					if (".,()12345-/ ".includes(letter)) continue;
+
+					if (mergeLetters) {
+						if (letter == "á") letter = "a";
+						if (letter == "é") letter = "e";
+						if (letter == "í") letter = "i";
+						if (letter == "ó") letter = "o";
+						if (letter == "ú") letter = "u";
+						if (letter == "ý") letter = "y";
+					}
+
+					var multiplier = 1;
+
+					if (debug_words.includes(word)) multiplier = 7;
+					if (debug_words2.includes(word)) multiplier = 3;
+
+					if (letter in stats) {
+						stats[letter] += multiplier;
+					} else {
+						stats[letter] = multiplier;
+						letters.push(letter);
+					}
+
+					totalTags += multiplier;
+				}
+			}
+		}
+
+		letters.sort((a, b) => {
+			return stats[b] - stats[a];
+		});
+
+		document.getElementById("out").innerHTML += "<div>total letters (with weights): " + totalTags + "</div>";
+
+		for (var i = 0; i < letters.length; i++) {
+			document.getElementById("out").innerHTML += "<div>" + letters[i] + ": " + (Math.round((stats[letters[i]] / totalTags) * 10000) / 100) + "%</div>";
+		}
+	}
+
+	function jsonize() {
+		document.getElementById("out").innerHTML = "";
+
+		for (var i = 0; i < entry_words.length; i++) {
+			var word = entry_words[i];
+
+			if (word in entries) {
+				var dat = entries[word];
+				var thing = '<br>"' + word + '": { "type": "' + dat[0] + '", "definition": "' + dat[1].replaceAll('"', '\\"') + '"';
+
+				if (dat.length >= 3) thing += ', "origin": "' + dat[2] + '"';
+				if (dat.length >= 4) {
+					thing += ', "examples": [ ';
+
+					for (var i2 = 0; i2 < dat[3].length; i2++) {
+						thing += '"' + dat[3][i2] + (i2 < dat[3].length - 1 ? '", ' : '"');
+					}
+
+					thing += ' ]';
+				}
+
+				thing += ' },';
+
+				document.getElementById("out").innerHTML += thing;
+			}
+		}
+	}
+
+	function doletterfrequency() {
+		letterfreq(false);
+	}
+
+	function doletterfrequency2() {
+		letterfreq(true);
+	}
+
+	document.getElementById("button").onclick = checkwords;
+	document.getElementById("button2").onclick = dostatistics;
+	document.getElementById("button3").onclick = doloanwordstatistics;
+	document.getElementById("button4").onclick = doletterfrequency;
+	document.getElementById("button5").onclick = doletterfrequency2;
+	document.getElementById("button6").onclick = jsonize;
+
+	for (var i = 0; i < entry_words.length; i++) {
+		var word = entry_words[i];
+
+		if (word in entries) {
+			if (entries[word].length > 2) {
+				if (entries[word][2] == "" && !word.includes(" ") && !word.includes("-")) {
+					document.getElementById("out").innerHTML += "<div>" + word + " is missing tags!</div>";
+				}
+			} else if (!word.includes(" ") && !word.includes("-")) {
+				document.getElementById("out").innerHTML += "<div>" + word + " is missing tags!</div>";
+			}
+		} else {
+			document.getElementById("out").innerHTML += "<div>" + word + " has no dictionary entry!</div>";
+		}
+	}
+</script>
+</body>
+</html>
