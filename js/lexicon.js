@@ -2530,7 +2530,7 @@ const entries = {
 	"breiðja": ["verb", "to widen, to broaden (intransitive)"],
 	"breiðr": ["adjective", "wide, broad"],
 	"brekkr": ["masculine noun", "edge, rim"],
-	"brenna": ["verb", "to burn, to be on fire", "strong verb b", ["Grúfan brennr. = The hearth is burning."]],
+	"brenna": ["verb", "to burn, to be on fire (intransitive)", "strong verb b", ["Grúfan brennr. = The hearth is burning."]],
 	"bresta": ["verb", "to crash, to collide (with á + dative); to burst through a door (with í gøgnum + dative)"],
 	"breyð": ["neuter noun", "bread"],
 	"bring": ["feminine noun", "yard, enclosure"],
