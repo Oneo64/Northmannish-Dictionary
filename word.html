@@ -199,11 +199,14 @@
 			}
 
 			if (entry[0] == "pronoun" || entry[0] == "determiner") {
-				var personal_pronouns = ["jek", "þú", "hann", "hon", "þat", "vit", "þit", "þeir", "þær", "þey"];
+				var personal_pronouns = ["jek", "þú", "hann", "hon", "þat", "vit", "þit", "þeir", "þær", "þey", "minn", "þinn", "sinn"];
+				var both = (v2 == "minn" || v2 == "þinn" || v2 == "sinn");
 
 				if (personal_pronouns.includes(v2)) {
 					document.getElementById("tables").innerHTML = html_tables.personal_pronouns;
-				} else {
+				}
+
+				if (!personal_pronouns.includes(v2) || both) {
 					document.getElementById("tables").innerHTML = html_tables.adjective;
 					document.getElementById("adjective_top").innerHTML = "inflections of " + v2;
 

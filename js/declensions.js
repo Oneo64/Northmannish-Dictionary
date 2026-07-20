@@ -279,6 +279,40 @@ const determiner_declensions = {
 		"þessa", "þessar", "þessi",
 		"þessum", "þessum", "þessum",
 		"þessa", "þessa", "þessa",
+	],
+
+	minn: [
+		"minn", "mín", "mitt",
+		"minn", "mína", "mitt",
+		"mínum", "míni", "mínu",
+		"míns", "mínar", "míns",
+
+		"mínir", "mínar", "mín",
+		"mína", "mínar", "mín",
+		"mínum", "mínum", "mínum",
+		"mína", "mína", "mína",
+	],
+	þinn: [
+		"þinn", "þín", "þitt",
+		"þinn", "þína", "þitt",
+		"þínum", "þíni", "þínu",
+		"þíns", "þínar", "þíns",
+
+		"þínir", "þínar", "þín",
+		"þína", "þínar", "þín",
+		"þínum", "þínum", "þínum",
+		"þína", "þína", "þína",
+	],
+	sinn: [
+		"sinn", "sín", "sitt",
+		"sinn", "sína", "sitt",
+		"sínum", "síni", "sínu",
+		"síns", "sínar", "síns",
+
+		"sínir", "sínar", "sín",
+		"sína", "sínar", "sín",
+		"sínum", "sínum", "sínum",
+		"sína", "sína", "sína",
 	]
 };
 
