@@ -3907,7 +3907,7 @@ const entries = {
 	"senda inn til": ["verb", "to submit something (with accusative \"what\" + inn til + genitive \"to whom\")"],
 	"senda": ["verb", "to send"],
 	"ser-stakr": ["adjective", "special, incomparable, unmatchable, unique, one-of-a-kind"],
-	"serkr": ["masculine noun", "chemise, frock, shift"],
+	"serkr": ["masculine noun", "chemise, frock, shift (linen undergarment worn by women)"],
 	"serstak-liga": ["adverb", "especially"],
 	"setja burt": ["verb", "to put away (with accusative + burt)"],
 	"setja": ["verb", "to put, to place; to set, to apply changes; to stay or lay undisturbed (poetic)"],
