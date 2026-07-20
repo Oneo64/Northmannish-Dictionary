@@ -4079,7 +4079,7 @@ const entries = {
 	"standa": ["verb", "to stand", "strong verb a"],
 	"starka-fullr": ["masculine noun", "vigorous, full of vigor"],
 	"starki": ["masculine noun", "strength, vigor"],
-	"starkr": ["adjective", "strong"],
+	"starkr": ["adjective", "strong, forceful, powerful; potent (of alcohol and coffee); spicy (of food)", "", ["Þórvaldr var starkr gunnmaðr. = Þórvaldr was a strong warrior.", "Mer líkar starkr mjøðr. = I like strong mead."]],
 	"statta": ["feminine noun", "statue, sculpture; figurine, carving"],
 	"staðr": ["masculine noun", "place, spot, location; stead, abode, dwelling", "masculine i-stem"],
 	"steikja": ["verb", "to cook, to make food; to roast, to steak"],
