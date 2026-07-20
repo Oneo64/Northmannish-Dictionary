@@ -99,6 +99,7 @@ const ipa_dict = {
 	"t-": "tʰ",
 
 	"ðg": "ðg",
+	"rg": "rg",
 
 	"ang": "aŋg",
 	"eng": "eiŋg",
@@ -150,6 +151,8 @@ const ipa_dict_regional = {
 	"rk": "ʀ̥k",
 	"rp": "ʀ̥p",
 	"rt": "ʀ̥t",
+
+	"rg": "ʀg",
 
 	"-gl": "kɨl",
 	"-gn": "kɨn",
