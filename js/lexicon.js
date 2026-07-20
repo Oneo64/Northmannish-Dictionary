@@ -3942,7 +3942,7 @@ const entries = {
 	"skjángi": ["masculine noun", "tundra, snowy plain; an open field of snow"],
 	"skjøld-mey": ["feminine noun", "shieldmaiden"],
 	"skjøldr": ["masculine noun", "shield"],
-	"skjúta upp": ["verb", "to propose, to suggest (with accusative or clause)", "strong verb f", ["Hann skát upp hugmynd fyrir oss. = He suggested an idea for us.", "Jek skýt upp at vit ferum til óperunnar. = I suggest that we go to the opera."]],
+	"skjúta upp": ["verb", "to propose, to suggest (with accusative or clause)", "strong verb f", ["Hann skát upp nýja hugmynd fyrir oss. = He proposed a new idea for us.", "Jek skýt upp at vit ferum til óperunnar. = I suggest that we go to the opera."]],
 	"skjúta": ["verb", "to shoot something (intransitive or with ann + accusative)", "strong verb f"],
 	"skjútr": ["adjective", "fast, quick, rapid"],
 	"skop": ["neuter noun", "scoff, sneer, smirk"],
