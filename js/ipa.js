@@ -113,6 +113,8 @@ const ipa_dict = {
 	"-yng": "yŋk",
 	"-øng": "œŋk",
 
+	"-ingl": "iŋkl̥",
+
 	"engj": "eiŋc",
 	"ingj": "iŋc",
 	"yngj": "yŋc",
