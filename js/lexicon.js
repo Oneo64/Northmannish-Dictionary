@@ -4236,7 +4236,7 @@ const entries = {
 	"urra": ["verb", "to growl, to snarl"],
 	"urring": ["feminine noun", "growling, snarling"],
 	"urtr": ["masculine noun", "work, effort, labour, struggle"],
-	"urð": ["neuter noun", "kiln, oven, furnace"],
+	"urð": ["neuter noun", "kiln (an oven or furnace made of stones)"],
 	"uslar": ["masculine noun", "embers, sparks", "pl-only"],
 	"vagl": ["neuter noun", "perch, roost (for birds)"],
 	"vagn": ["neuter noun", "cart, wagon, carriage"],
