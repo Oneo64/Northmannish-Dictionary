@@ -4403,7 +4403,7 @@ const entries = {
 	"verslu-maðr": ["masculine noun", "merchant"],
 	"verslun": ["feminine noun", "shop, store, emporium"],
 	"verð-leyss": ["adjective", "worthless, without value"],
-	"verða": ["verb", "to become (with nominative); will be, will turn out (with nominative)", "strong verb b"],
+	"verða": ["verb", "to become (with nominative); to have, to must, to need to do something (with clause); will be, will turn out (with nominative)", "strong verb b", ["Verðu vreitt? = Are you angry?", "Jek varð at verna mek frá árásmønnum. = I had to defend myself from attackers.", "Allt verðr vel. = Everything will be okay."]],
 	"verðr": ["adjective", "worthy, valueable, useful, high-value"],
 	"vestr (1)": ["masculine noun", "west"],
 	"vestr (2)": ["adverb", "westwards"],
