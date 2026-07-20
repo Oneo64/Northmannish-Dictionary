@@ -4375,7 +4375,7 @@ const entries = {
 	"Veldalfheimr": ["masculine noun", "world of the fey"],
 	"veldi": ["masculine noun", "kingdom, realm, empire; power, reign"],
 	"velja": ["verb", "to choose, to select", "strong verb b"],
-	"venginn": ["adjective", "cursed, hexed, bewitched (by magic)", ""],
+	"venginn": ["adjective", "cursed, hexed, bewitched (by magic)", "", ["Vengið sverð er aldri gótt. = A cursed sword is never good."]],
 	"venja (1)": ["verb", "to teach, to train, to coach, to guide"],
 	"venja (2)": ["feminine noun", "teaching, guidance; habit, tendency"],
 	"venju-liga": ["adverb", "normally, usually"],
