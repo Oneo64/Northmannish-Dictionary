@@ -3938,7 +3938,7 @@ const entries = {
 	"skógr": ["masculine noun", "forest (archaic)"],
 	"skógs-bjørn": ["feminine noun", "european brown bear"],
 	"skór": ["masculine noun", "shoe, boot"],
-	"skøll": ["feminine noun", "a crash, a clatter; a bark (of dogs)"],
+	"skøll": ["feminine noun", "a crash, a clatter; a bark (of dogs)", "sg-only"],
 	"ský-vitr": ["adjective", "smart, intelligent"],
 	"skýr": ["adjective", "bright, clear, sharp (in thought); clear, understandable, precise (in idea); readable, intelligable (in text and speech)"],
 	"slag": ["neuter noun", "hit, strike, blow"],
