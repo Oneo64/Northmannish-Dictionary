@@ -2903,7 +2903,7 @@ const entries = {
 	"gera illast": ["phrase", "means \"do your worst\""],
 	"gera vándamál": ["verb", "to cause trouble, to be problematic"],
 	"gera óførvandi": ["verb", "to incapacitate, to disable, to cripple (with accusative + óførvandi)", "", ["Hann gerði mek óførvandi. = He incapacitated me."]],
-	"gera": ["verb", "to do, to make, to create; to make (with accusative + accusative adjective or infinitive)"],
+	"gera": ["verb", "to do, to make, to create; to make (with accusative + accusative adjective or infinitive)", "", ["Hvar gerir þú? = What are you doing?", "Skrímslit gerir þá alla fara. = The monster made them all leave."]],
 	"gerask": ["verb", "to happen, to occur"],
 	"geta": ["verb", "to get, to fetch (with accusative)", "strong verb b"],
 	"getja í gøgnum": ["verb", "to run something through with a blade (with accusative \"what\" + í gøgnum + dative \"through what\")"],
