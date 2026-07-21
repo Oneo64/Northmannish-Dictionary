@@ -832,6 +832,46 @@ function analyse_verb(word) {
 	return [vowel_pos, vowel_size, stem];
 }
 
+function finish_conjugation(list, word, tail) {
+	var word_forms = list;
+
+	if (word_forms.length < 29) {
+		if (word.endsWith("á")) {
+			word_forms.push(word.substring(0, word.length - 1) + "áandi" + tail);
+		} else {
+			word_forms.push(word.substring(0, word.length - 1) + "andi" + tail);
+		}
+
+		if (word.endsWith("ja")) {
+			word_forms.push(word.substring(0, word.length - 2) + "ing" + tail);
+		} else if (word.endsWith("á")) {
+			word_forms.push(word.substring(0, word.length - 1) + "áing" + tail);
+		} else {
+			word_forms.push(word.substring(0, word.length - 1) + "ing" + tail);
+		}
+
+		if (word.endsWith("á")) {
+			word_forms.push(word.substring(0, word.length - 1) + "áask" + tail);
+		} else {
+			word_forms.push(word.substring(0, word.length - 1) + "ask" + tail);
+		}
+	}
+
+	if (word.endsWith("ja")) {
+		word_forms.push(word.substring(0, word.length - 2) + "iþu" + tail);
+		word_forms.push(word.substring(0, word.length - 2) + "iþit" + tail);
+	} else {
+		word_forms.push(word + "þu" + tail);
+		word_forms.push(word + "þit" + tail);
+	}
+
+	for (var i = 0; i < word_forms.length; i++) {
+		word_forms[i] = word_forms[i].replaceAll("-", "");
+	}
+
+	return word_forms;
+}
+
 function get_conjugation(word, tags, tail) {
 	if (word.includes("-")) {
 		var prefix = word.substring(0, word.indexOf("-"));
@@ -848,7 +888,7 @@ function get_conjugation(word, tags, tail) {
 
 	var conjugation = [];
 	var conjugation_size = 1;
-	var analysis = analyse_verb(word, tags);
+	var analysis = analyse_verb(word);
 	var autopick = true;
 	var weak_a = false;
 	var no_j_insert = false;
@@ -867,7 +907,7 @@ function get_conjugation(word, tags, tail) {
 				conjugation.push(strong_verb_a_conjugations[word][i] + tail);
 			}
 
-			return conjugation;
+			return finish_conjugation(conjugation, word, tail);
 		}
 
 		autopick = false;
@@ -1021,32 +1061,5 @@ function get_conjugation(word, tags, tail) {
 		word_forms.push(new_form);
 	}
 
-	if (word.endsWith("á")) {
-		word_forms.push(word.substring(0, word.length - 1) + "áandi" + tail);
-	} else {
-		word_forms.push(word.substring(0, word.length - 1) + "andi" + tail);
-	}
-
-	if (word.endsWith("ja")) {
-		word_forms.push(word.substring(0, word.length - 2) + "ing" + tail);
-	} else if (word.endsWith("á")) {
-		word_forms.push(word.substring(0, word.length - 1) + "áing" + tail);
-	} else {
-		word_forms.push(word.substring(0, word.length - 1) + "ing" + tail);
-	}
-
-	if (word.endsWith("á")) {
-		word_forms.push(word.substring(0, word.length - 1) + "áask" + tail);
-	} else {
-		word_forms.push(word.substring(0, word.length - 1) + "ask" + tail);
-	}
-
-	word_forms.push(word + "þu" + tail);
-	word_forms.push(word + "þit" + tail);
-
-	for (var i = 0; i < word_forms.length; i++) {
-		word_forms[i] = word_forms[i].replaceAll("-", "");
-	}
-
-	return word_forms;
+	return finish_conjugation(word_forms, word, tail);
 }
