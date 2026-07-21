@@ -4814,7 +4814,7 @@ const entries = {
 	"ó-gildr": ["adjective", "cheap, inexpensive, easy to buy"],
 	"ó-hlýða": ["verb", "to disobey, to defy"],
 	"ó-hreinn": ["adjective", "unclean, soiled, dirty, impure"],
-	"ó-huggligr": ["adjective", "uncomfortable"],
+	"ó-huggligr": ["adjective", "uncomfortable; disturbing, uncanny"],
 	"ó-kunnigr": ["adjective", "unfamiliar, unacquainted"],
 	"ó-líktr": ["adjective", "different, unlike"],
 	"ó-røð": ["feminine noun", "chaos, mess"],
