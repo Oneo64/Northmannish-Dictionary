@@ -824,9 +824,9 @@ function analyse_verb(word) {
 	}
 
 	if ("jajájojójujú".includes(vowel_chr)) stem = "a";
-	if (word.endsWith("na") && !vowels.includes(word.charAt(word.length - 3)) && !word.endsWith("nna")) stem = "a";
+	if (word.endsWith("na") && !"nr".includes(word.charAt(word.length - 3))) stem = "a";
+	if (word.endsWith("ta") && !"nftrs".includes(word.charAt(word.length - 3))) stem = "a";
 	if (word.endsWith("ra") && !vowels.includes(word.charAt(word.length - 3))) stem = "a";
-	if (word.endsWith("ta") && !vowels.includes(word.charAt(word.length - 3))) stem = "a";
 	if (vowel_chr == "ø" && word.endsWith("va")) stem = "a";
 
 	return [vowel_pos, vowel_size, stem];
@@ -1053,10 +1053,13 @@ function get_conjugation(word, tags, tail) {
 
 		var new_form = word3 + ending_true;
 
+		if (new_form.includes("stsk")) new_form = new_form.replaceAll("stsk", "zk");
+		if (new_form.includes("stst")) new_form = new_form.replaceAll("stst", "st");
 		if (new_form.includes("ts")) new_form = new_form.replaceAll("ts", "z");
 		if (new_form.includes("ds")) new_form = new_form.replaceAll("ds", "z");
 		if (new_form.includes("dt")) new_form = new_form.replaceAll("dt", "t");
 		if (new_form.includes("ftt")) new_form = new_form.replaceAll("ftt", "ft");
+		if (new_form.includes("ttt")) new_form = new_form.replaceAll("ttt", "tt");
 		if (tail) new_form += tail;
 
 		word_forms.push(new_form);
