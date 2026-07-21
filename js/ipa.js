@@ -87,6 +87,7 @@ const ipa_dict = {
 	"ss": "ʃː",
 	"t": "t",
 	"tt": "ht",
+	"-tn": "tn̥",
 	"v": "ʋ",
 	"v-": "v",
 	"x": "ks",
