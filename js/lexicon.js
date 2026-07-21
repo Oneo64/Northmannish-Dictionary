@@ -4648,7 +4648,7 @@ const entries = {
 	"venju-ligr": ["adjective", "normal, usual, ordinary, common"],
 	"vera með": ["verb", "to have, to hold, to carry (with dative); to be with, to be next to someone (with dative)", "strong verb a"],
 	"vera til": ["verb", "to exist, to be discovered (intransitive)", "strong verb a", ["Hve er slíkt skrímsli til? = How can such a monster exist?"]],
-	"vera varkárr": ["verb", "to be careful, to beware", "strong verb a"],
+	"vera varkárr": ["verb", "to be careful, to beware", "strong verb a", ["Þú atlar at vera varkárari. = You should be more careful."]],
 	"vera í eldi": ["verb", "to be on fire", "strong verb a"],
 	"vera": ["verb", "to be (with nominative)", "strong verb a"],
 	"veri": ["masculine noun", "creation, creature, animal, monster"],
