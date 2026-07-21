@@ -4443,7 +4443,7 @@ const entries = {
 	"svo mjøk": ["adverb", "so much"],
 	"svo": ["adverb", "so, thus, therefore (with clause); very, really, extremely (with adjective)"],
 	"svona veg": ["phrase", "means \"there we go\""],
-	"svona": ["adverb", "so, very, really (used with an adjective); like this"],
+	"svona": ["adverb", "so, very, really (used with an adjective); like this, such as this"],
 	"svíki-lyndr": ["adjective", "dishonest, deceitful"],
 	"svíkja": ["verb", "to falsify, to fabricate, to forge, to fraud (documents, information, lies, etc)"],
 	"svíkjun": ["feminine noun", "forgery, fabrication, fraud"],
