@@ -239,6 +239,13 @@ const special_declensions = {
 		"", "", "ørløg", "ørløgin",
 		"", "", "ørløgum", "ørløgunum",
 		"", "", "ørlaga", "ørlaganna",
+	],
+
+	"Veldinn Rómanna": [
+		"Veldinn Rómanna", "", "", "",
+		"Veldann Rómanna", "", "", "",
+		"Veldanum Rómanna", "", "", "",
+		"Veldans Rómanna", "", "", "",
 	]
 };
 

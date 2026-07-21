@@ -41,6 +41,15 @@ const html_tables = {
 		<tr> <th>dative</th> <td id="n10"></td> <td id="n11"></td> </tr>
 		<tr> <th>genitive</th> <td id="n14"></td> <td id="n15"></td> </tr>
 	</tbody></table>`,
+	noun_sg_indef: `<table id="noun_declension" class="pfont"><tbody>
+		<tr> <th id="declension_top" colspan="2">declension for...</th> </tr>
+		<tr> <th id="gender" rowspan="2">neuter</th> <th>singular only</th> </tr>
+		<tr> <th>indefinite</th> </tr>
+		<tr> <th>nominative</th> <td id="n0"></td> </tr>
+		<tr> <th>accusative</th> <td id="n4"></td> </tr>
+		<tr> <th>dative</th> <td id="n8"></td> </tr>
+		<tr> <th>genitive</th> <td id="n12"></td> </tr>
+	</tbody></table>`,
 
 	verb: `<table id="verb_conjugation" class="pfont"><tbody>
 		<tr> <th id="conjugation_top" colspan="3">conjugation for...</th> </tr>

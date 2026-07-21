@@ -94,6 +94,8 @@
 					document.getElementById("tables").innerHTML = html_tables.noun_sg + "<br>";
 				} else if (tags.includes("pl-only")) {
 					document.getElementById("tables").innerHTML = html_tables.noun_pl + "<br>";
+				} else if (tags.includes("proper-name")) {
+					document.getElementById("tables").innerHTML = html_tables.noun_sg_indef + "<br>";
 				} else {
 					document.getElementById("tables").innerHTML = html_tables.noun + html_tables.noun_mobile + "<br>";
 				}	
