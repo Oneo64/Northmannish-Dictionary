@@ -23,10 +23,11 @@ const ipa_dict = {
 	"ei": "eiː",
 	"ey": "eyː",
 
-	"einn": "einnː",
+	"einn": "einː",
 	"ein-": "ein",
 	"eirr": "eirː",
 	"eyrr": "eyrː",
+	"œnn": "ɤinː",
 
 	"b": "b",
 	"bb": "b",
@@ -147,6 +148,7 @@ const ipa_dict_regional = {
 	"ey": "ʌɪː",
 	"eirr": "eiʀː",
 	"eyrr": "ʌɪʀː",
+	"œnn": "ɑinː",
 
 	"ð": "d",
 	"hv": "kf",
@@ -185,7 +187,11 @@ const special_ipa_constructions = {
 	"einhverjir þeir": ["ˈeinkʋɛrjɪr θeiːr", "ˈeinkʋɛʀjɪʀ θeiːʀ"],
 	halló: "ˈhalouː",
 	œi: ["ˈɤiːjɪ", "ˈɑiːjɪ"],
-	hœi: ["ˈhɤiːjɪ", "ˈhɑiːjɪ"]
+	hœi: ["ˈhɤiːjɪ", "ˈhɑiːjɪ"],
+
+	"suðr-œnn": ["ˈsuːðrɤinː", "ˈsuːdʀɑinː"],
+	"eystr-œnn": ["ˈeystrɤinː", "ˈʌɪːstʀɑinː"],
+	"vestr-œnn": ["ˈvɛstrɤinː", "ˈvɛstʀɑinː"]
 };
 
 function check_vowels(section) {
