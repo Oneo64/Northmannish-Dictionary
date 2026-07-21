@@ -2534,7 +2534,7 @@ const entries = {
 	"at-før": ["feminine nounn", "proceedings, method"],
 	"at-geirr": ["masculine noun", "atgeir (a weapon)"],
 	"at-hygli": ["feminine noun", "attention"],
-	"atla": ["verb", "to ought, to be obligated to; should do something (with infinitive); should go somewhere (with adverb)", "", ["Vit øtlum vinstra. = We should go left."]],
+	"atla": ["verb", "to ought, to be obligated to (with infinitive); should do something (with infinitive); should go somewhere (with adverb)", "", ["Vit øtlum vinstra. = We should go left."]],
 	"atta": ["number", "eight", "indeclinable"],
 	"axa": ["verb", "to carve with an axe"],
 	"axtolli": ["masculine noun", "axolotl"],
