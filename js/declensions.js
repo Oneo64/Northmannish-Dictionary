@@ -161,6 +161,12 @@ const noun_declensions = {
 };
 
 const special_declensions = {
+	gás: [
+		"gás", "gásin", "gæss", "gæssnar",
+		"gás", "gásuna", "gæss", "gæssnar",
+		"gás", "gásunni", "gásum", "gásunum",
+		"gásar", "gásarinnar", "gása", "gásanna",
+	],
 	maðr: [
 		"maðr", "maðrinn", "menn", "mennirnir",
 		"mann", "manninn", "menn", "mennina",
