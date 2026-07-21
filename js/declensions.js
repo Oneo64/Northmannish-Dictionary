@@ -216,6 +216,12 @@ const special_declensions = {
 		"", "", "røkum", "røkunum",
 		"", "", "raka", "rakanna",
 	],
+	tøl: [
+		"", "", "tøl", "tølin",
+		"", "", "tøl", "tølin",
+		"", "", "tølum", "tølunum",
+		"", "", "tala", "talanna",
+	],
 	"ør-løg": [
 		"", "", "ørløg", "ørløgin",
 		"", "", "ørløg", "ørløgin",
