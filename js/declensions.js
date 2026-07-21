@@ -127,6 +127,12 @@ const noun_declensions = {
 		"u", "unni", "um", "unum",
 		"ar", "arinnar", "a", "anna",
 	],
+	feminine_u: [
+		"ú", "úin", "ýr", "ýrnar",
+		"ú", "úna", "ýr", "ýrnar",
+		"ú", "únni", "úm", "únum",
+		"úar", "úarinnar", "úa", "úanna",
+	],
 
 	neuter_none: [
 		"", "it", "", "in",
@@ -492,6 +498,9 @@ function get_declension(word, gender, tags) {
 			} else if (word.endsWith("ing")) {
 				declension = noun_declensions.feminine_ing;
 				declension_size = 0;
+			} else if (word.endsWith("ú")) {
+				declension = noun_declensions.feminine_u;
+				declension_size = 1;
 			} else {
 				declension = noun_declensions.feminine_none;
 				declension_size = 0;
