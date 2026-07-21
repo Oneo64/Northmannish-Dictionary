@@ -44,7 +44,6 @@ const ipa_dict = {
 	"gs": "ks",
 	"gl-": "gl",
 	"gn-": "gn",
-	"-g": "k",
 	"-gl": "kl̥",
 	"-gn": "kn̥",
 	"h": "h",
@@ -96,6 +95,9 @@ const ipa_dict = {
 	"k-": "kʰ",
 	"p-": "pʰ",
 	"t-": "tʰ",
+
+	"-lg": "lk",
+	"-rg": "rk",
 
 	"-lg-": "lg",
 	"-rg-": "rg",
