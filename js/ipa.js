@@ -44,6 +44,7 @@ const ipa_dict = {
 	"gs": "ks",
 	"gl-": "gl",
 	"gn-": "gn",
+	"-g": "k",
 	"-gl": "kl̥",
 	"-gn": "kn̥",
 	"h": "h",
@@ -57,7 +58,6 @@ const ipa_dict = {
 	"l": "l",
 	"hl": "l̥",
 	"ll": "tl̥",
-	"-lg": "lk",
 	"m": "m",
 	"mm": "mː",
 	"mk": "m̥k",
@@ -97,9 +97,9 @@ const ipa_dict = {
 	"p-": "pʰ",
 	"t-": "tʰ",
 
-	"lg": "lg",
-	"rg": "rg",
-	"ðg": "ðg",
+	"-lg-": "lg",
+	"-rg-": "rg",
+	"-ðg-": "ðg",
 
 	"ang": "aŋg",
 	"eng": "eiŋg",
@@ -229,7 +229,19 @@ function construct_ipa(word, regional) {
 				continue;
 			}
 
-			if ((i == 0 || word2.charAt(i - 1) == "-") && section + "-" in ipa_dict) {
+			var isBack = i == 0 || word2.charAt(i - 1) == "-";
+			var isFront = k == word2.length || word2.charAt(i + 1) == "-";
+
+			if (!isBack && !isFront && "-" + section + "-" in ipa_dict) {
+				pronunciation += get_section_ipa("-" + section + "-", regional);
+				i += section.length - 1;
+
+				if (check_vowels(section)) counted_vowels += 1;
+
+				break;
+			}
+
+			if (isBack && section + "-" in ipa_dict) {
 				pronunciation += get_section_ipa(section + "-", regional);
 				i += section.length - 1;
 
@@ -238,7 +250,7 @@ function construct_ipa(word, regional) {
 				break;
 			}
 
-			if ((k == word2.length || word2.charAt(i + 1) == "-") && "-" + section in ipa_dict) {
+			if (isFront && "-" + section in ipa_dict) {
 				if (section == "r" && !vowels.includes(word2.charAt(i - 1))) {
 					pronunciation += get_section_ipa("r_ending", regional);
 				} else {
