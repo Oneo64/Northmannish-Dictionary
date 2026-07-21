@@ -856,13 +856,30 @@ function finish_conjugation(list, word, tail) {
 			word_forms.push(word.substring(0, word.length - 1) + "ask" + tail);
 		}
 	}
+	
+	/*var ending_test = (word.endsWith("na") && !"nr".includes(word.charAt(word.length - 3)))
+		|| (word.endsWith("ra") && !vowels.includes(word.charAt(word.length - 3)));
 
 	if (word.endsWith("ja")) {
 		word_forms.push(word.substring(0, word.length - 2) + "iþu" + tail);
-		word_forms.push(word.substring(0, word.length - 2) + "iþit" + tail);
+		word_forms.push(word.substring(0, word.length - 2) + "iþi" + tail);
+	} else if (word.endsWith("á") || word.endsWith("ærna") || ending_test) {
+		word_forms.push(word + "þu" + tail);
+		word_forms.push(word + "þi" + tail);
+	} else if (word.endsWith("ta") || word.endsWith("da") || word.endsWith("ða")) {
+		word_forms.push(word.substring(0, word.length - 1) + "u" + tail);
+		word_forms.push(word.substring(0, word.length - 1) + "iþi" + tail);
+	} else {
+		word_forms.push(word.substring(0, word.length - 1) + "þu" + tail);
+		word_forms.push(word.substring(0, word.length - 1) + "iþi" + tail);
+	}*/
+
+	if (word.endsWith("ja")) {
+		word_forms.push(word.substring(0, word.length - 2) + "iþu" + tail);
+		word_forms.push(word.substring(0, word.length - 2) + "iþi" + tail);
 	} else {
 		word_forms.push(word + "þu" + tail);
-		word_forms.push(word + "þit" + tail);
+		word_forms.push(word.substring(0, word.length - 1) + "iþi" + tail);
 	}
 
 	for (var i = 0; i < word_forms.length; i++) {
