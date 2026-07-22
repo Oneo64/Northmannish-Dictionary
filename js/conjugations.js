@@ -824,8 +824,8 @@ function analyse_verb(word) {
 	}
 
 	if ("jajájojójujú".includes(vowel_chr)) stem = "a";
-	if (word.endsWith("na") && !"nr".includes(word.charAt(word.length - 3))) stem = "a";
-	if (word.endsWith("ta") && !"nftrs".includes(word.charAt(word.length - 3))) stem = "a";
+	if (word.endsWith("na") && !("nr" + vowels).includes(word.charAt(word.length - 3))) stem = "a";
+	if (word.endsWith("ta") && !("nftrs" + vowels).includes(word.charAt(word.length - 3))) stem = "a";
 	if (word.endsWith("ra") && !vowels.includes(word.charAt(word.length - 3))) stem = "a";
 	if (vowel_chr == "ø" && word.endsWith("va")) stem = "a";
 
