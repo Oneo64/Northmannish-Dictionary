@@ -4571,7 +4571,7 @@ const entries = {
 	"ull-húfa": ["feminine noun", "beanie (a small brimless cap used in modern times)"],
 	"um": ["preposition", "about (with accusative); around or near a location (with dative)"],
 	"undir": ["preposition", "under (with dative)"],
-	"undorn": ["neuter noun", "afternoon"],
+	"undorn": ["feminine noun", "afternoon"],
 	"ungr": ["adjective", "young (yngri = comparative, yngstr = superlative)"],
 	"unna": ["verb", "to adore, to love (with dative)", "strong verb a"],
 	"upp": ["adverb", "upwards"],
