@@ -36,7 +36,7 @@
 			if (test.startsWith(v) || test.startsWith("-" + v)) list.push(entry_words[i]);
 		}
 
-		var order = "abdðefghiíjklmnoóprstuúvyýzþæøœ";
+		var order = "aábdðefghiíjklmnoóprstuúvyýzþæøœ";
 		var orderMap = new Map(order.split("").map((x, i) => [x, i]));
 
 		list.sort((a, b) => {
