@@ -487,6 +487,24 @@ const strong_verb_a_conjugations = {
 		"hafinn", "hafið",
 		"hafandi", "hafing", "hafask"
 	],
+	heita: [
+		"heit", "hæt",
+		"heitr", "hæzt",
+		"heitr", "hæt",
+		"heitum", "hætum",
+		"heituð", "hætuð",
+		"heitu", "hætu",
+
+		"heizk", "hæzk",
+		"heizk", "hæzk",
+		"heizk", "hæzk",
+		"heitumsk", "hætumsk",
+		"heitusk", "hætusk",
+		"heitusk", "hætusk",
+
+		"heitinn", "heitið",
+		"heitandi", "heiting", "heitask"
+	],
 	hlæja: [
 		"hlæ", "hló",
 		"hlær", "hlóst",

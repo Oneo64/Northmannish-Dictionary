@@ -228,6 +228,12 @@ const special_declensions = {
 		"", "", "røkum", "røkunum",
 		"", "", "raka", "rakanna",
 	],
+	"skips-brýr": [
+		"", "", "skipsbrýr", "skipsbrýrnar",
+		"", "", "skipsbrýr", "skipsbrýrnar",
+		"", "", "skipsbrúm", "skipsbrúnum",
+		"", "", "skipsbrúa", "skipsbrúanna",
+	],
 	tøl: [
 		"", "", "tøl", "tølin",
 		"", "", "tøl", "tølin",
