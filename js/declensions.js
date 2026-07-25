@@ -65,6 +65,12 @@ const noun_declensions = {
 		"i", "inum", "um", "unum",
 		"is", "isins", "a", "anna",
 	],
+	masculine_s: [
+		"", "inn", "ar", "arnir",
+		"", "inn", "a", "ana",
+		"i", "inum", "um", "unum",
+		"", "ins", "a", "anna",
+	],
 	masculine_none: [
 		"", "inn", "ar", "arnir",
 		"", "inn", "a", "ana",
@@ -240,11 +246,23 @@ const special_declensions = {
 		"", "", "tølum", "tølunum",
 		"", "", "tala", "talanna",
 	],
+	vá: [
+		"vá", "váin", "", "",
+		"vá", "vána", "", "",
+		"vá", "vánni", "", "",
+		"váar", "váarinnar", "", "",
+	],
 	þørur: [
 		"", "", "þørur", "þørurnar",
 		"", "", "þørur", "þørurnar",
 		"", "", "þørum", "þørunum",
 		"", "", "þara", "þaranna",
+	],
+	áprill: [
+		"áprill", "", "", "",
+		"ápril", "", "", "",
+		"ápril", "", "", "",
+		"áprils", "", "", "",
 	],
 	"ør-løg": [
 		"", "", "ørløg", "ørløgin",
@@ -496,6 +514,9 @@ function get_declension(word, gender, tags) {
 			} else if (word.endsWith("nn")) {
 				declension = noun_declensions.masculine_nn;
 				declension_size = 1;
+			} else if (word.endsWith("s")) {
+				declension = noun_declensions.masculine_s;
+				declension_size = 0;
 			} else {
 				declension = noun_declensions.masculine_none;
 				declension_size = 0;
