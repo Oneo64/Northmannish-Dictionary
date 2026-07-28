@@ -256,6 +256,23 @@ const verb_conjugations = {
 
 		"í-inn", "í-ið", 1
 	],
+	strong_es_as: [
+		"e-", "a-",
+		"e-ss", "a-st",
+		"e-ss", "a-",
+		"e-um", "ø-um",
+		"e-uð", "ø-uð",
+		"e-u", "ø-u",
+
+		"e-sk", "a-sk",
+		"e-sk", "a-sk",
+		"e-sk", "a-sk",
+		"e-umsk", "ø-umsk",
+		"e-usk", "ø-usk",
+		"e-usk", "ø-usk",
+
+		"e-inn", "e-ið", 1
+	],
 	strong_e_ekk: [
 		"eng", "ekk",
 		"engr", "ekkst",
@@ -954,6 +971,7 @@ function get_conjugation(word, tags, tail) {
 		if (word.charAt(analysis[0]) == "á") conjugation = verb_conjugations.strong_e_a3;
 		if (word.charAt(analysis[0]) == "i") conjugation = verb_conjugations.strong_i_a;
 		if (word.charAt(analysis[0]) == "í") conjugation = verb_conjugations.strong_i2_a;
+		if (word.endsWith("esa")) conjugation = verb_conjugations.strong_es_as;
 
 		if (analysis[1] == 2 && word.substring(analysis[0], analysis[0] + 2) == "ja") conjugation = verb_conjugations.strong_e_a4;
 
