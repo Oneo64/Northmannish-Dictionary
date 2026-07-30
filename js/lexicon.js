@@ -4092,7 +4092,7 @@ const entries = {
 	"ofan": ["adverb", "from above"],
 	"offra": ["verb", "to offer, to sacrifice (with accusative \"what\" + til + genitive \"for what\")"],
 	"offring": ["feminine noun", "offering, sacrifice"],
-	"ofsi": ["masculine noun", "evil, malice"],
+	"ofsi": ["masculine noun", "evil, wickedness, cruelty, malice"],
 	"oft": ["adverb", "often (oftar = comparative, oftast = superlative)"],
 	"oftar": ["adverb", "comparative of oft (more often)"],
 	"oftast": ["adverb", "superlative of oft (most often)"],
