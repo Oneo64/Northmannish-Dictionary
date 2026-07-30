@@ -243,8 +243,8 @@ function construct_ipa(word, regional) {
 				continue;
 			}
 
-			var isBack = i == 0 || word2.charAt(i - 1) == "-";
-			var isFront = k == word2.length || word2.charAt(i + 1) == "-";
+			var isBack = i == 0 || word2.charAt(i - 1) == "-" || word2.charAt(i - 1) == " ";
+			var isFront = k == word2.length || word2.charAt(i + 1) == "-" || word2.charAt(i + 1) == " ";
 
 			if (!isBack && !isFront && "-" + section + "-" in ipa_dict) {
 				pronunciation += get_section_ipa("-" + section + "-", regional);
