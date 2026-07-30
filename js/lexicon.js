@@ -4115,7 +4115,7 @@ const entries = {
 	"para": ["verb", "to pair two together"],
 	"parkaxi": ["masculine noun", "parchment"],
 	"parra": ["verb", "to parry, to deflect with a weapon (with accusative)"],
-	"passa": ["verb", "to pass in progress or time"],
+	"passa": ["verb", "to pass in progress or time; to fit, to match", "", ["Vagnit passar oss. = The wagon passed us.", "Þessi kyrtill passar mek eigi. = This shirt doesn't fit me."]],
 	"peisa": ["feminine noun", "sweater, jersey"],
 	"pell": ["neuter noun", "velvet"],
 	"pera": ["feminine noun", "pear"],
