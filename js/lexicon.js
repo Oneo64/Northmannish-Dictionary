@@ -3943,7 +3943,7 @@ const entries = {
 	"mjúlg": ["feminine noun", "milk", "sg-only"],
 	"molna": ["verb", "to crumble, to break down, to fall apart (intransitive)"],
 	"moppa": ["feminine noun", "mop"],
-	"morgun-stjarna": ["masculine noun", "morning star (weapon) (informal)"],
+	"morgun-stjarna": ["feminine noun", "morning star (weapon) (informal)"],
 	"mulla": ["feminine noun", "mill (inside a windmill)"],
 	"muna": ["verb", "to remember", "strong verb a"],
 	"munkr": ["masculine noun", "monk, pilgrim"],
