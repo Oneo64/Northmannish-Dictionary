@@ -952,7 +952,7 @@ function get_conjugation(word, tags, tail) {
 	}
 
 	if (tags.includes("strong verb a")) {
-		if (word.endsWith("íta") || word.endsWith("ípa") || word.endsWith("ína")) {
+		if (word.endsWith("íta") || word.endsWith("ípa")) {
 			conjugation = verb_conjugations.strong_i2_ei;
 		} else {
 			for (var i = 0; i < 29; i++) {

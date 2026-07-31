@@ -3308,7 +3308,7 @@ const entries = {
 	"gráðr": ["masculine noun", "greed, gluttony"],
 	"gríma": ["feminine noun", "mask"],
 	"grín": ["neuter noun", "a jest, a joke"],
-	"grína": ["verb", "to jest, to joke", "strong verb a"],
+	"grína": ["verb", "to jest, to joke"],
 	"grípa": ["verb", "to grab, to grip, to grasp (with accusative)", "strong verb a"],
 	"grøf": ["neuter noun", "grave, tomb, burial place"],
 	"grønn": ["adjective", "green"],
