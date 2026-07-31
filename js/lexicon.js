@@ -4124,7 +4124,7 @@ const entries = {
 	"peð": ["neuter noun", "pawn, goon, thug, ruffian, hoodlum"],
 	"pinni": ["masculine noun", "stick, twig"],
 	"piparr": ["masculine noun", "pepper"],
-	"pissa": ["verb", "to urinate", "weak verb a"],
+	"pissa": ["verb", "to pee, to piss, to urinate", "weak verb a"],
 	"planki": ["masculine noun", "plank, board (of wood)"],
 	"planta": ["feminine noun", "plant, herb"],
 	"plasma": ["feminine noun", "energy, plasma"],
