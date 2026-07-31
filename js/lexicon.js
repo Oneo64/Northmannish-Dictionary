@@ -3941,7 +3941,7 @@ const entries = {
 	"mjúk-lyndr": ["adjective", "meek, gentle, soft (in personality)"],
 	"mjúk-máll": ["adjective", "soft-spoken"],
 	"mjúka": ["verb", "to soften, to tenderize"],
-	"mjúkr": ["adjective", "soft, meek; gentle, tender"],
+	"mjúkr": ["adjective", "soft (in texture or flexibility); gentle, tender"],
 	"mjúlg": ["feminine noun", "milk", "sg-only"],
 	"molna": ["verb", "to crumble, to break down, to fall apart (intransitive)"],
 	"moppa": ["feminine noun", "mop"],
