@@ -16,6 +16,23 @@ const verb_conjugations = {
 
 		"aðr", "að", 1
 	],
+	weak_a2: [
+		"a", "ða",
+		"ar", "ðir",
+		"ar", "ði",
+		"um", "ðum",
+		"uð", "ðuð",
+		"u", "ðu",
+
+		"ask", "ðisk",
+		"ask", "ðisk",
+		"ask", "ðisk",
+		"umsk", "ðumsk",
+		"usk", "ðusk",
+		"usk", "ðusk",
+
+		"ðr", "ð", 1
+	],
 	weak_dh_i: [
 		"ði", "dda",
 		"ðir", "ddir",
@@ -1014,7 +1031,12 @@ function get_conjugation(word, tags, tail) {
 
 	if (autopick) {
 		if (analysis[2] == "a") {
-			conjugation = verb_conjugations.weak_a;
+			if (word.endsWith("óa")) {
+				conjugation = verb_conjugations.weak_a2;
+			} else {
+				conjugation = verb_conjugations.weak_a;
+			}
+
 			weak_a = true;
 		} else {
 			if (word.endsWith("ja") && word.charAt(analysis[0]) == "y" && !tags.includes("weak verb b")) {
