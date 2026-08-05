@@ -173,6 +173,12 @@ const noun_declensions = {
 };
 
 const special_declensions = {
+	bók: [
+		"bók", "bókin", "bøkr", "bøkrnar",
+		"bók", "bókuna", "bøkr", "bøkrnar",
+		"bók", "bókunni", "bókum", "bókunum",
+		"bókar", "bókarinnar", "bóka", "bókanna",
+	],
 	gás: [
 		"gás", "gásin", "gæss", "gæssnar",
 		"gás", "gásuna", "gæss", "gæssnar",
