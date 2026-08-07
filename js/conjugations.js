@@ -359,19 +359,19 @@ const verb_conjugations = {
 		"a-inn", "a-ið", 1
 	],
 	strong_y_jo: [
-		"ý", "jó",
-		"ýr", "jóst",
-		"ýr", "jó",
-		"ýum", "jóum",
-		"ýuð", "jóuð",
-		"ýu", "jóu",
+		"ý", "jú",
+		"ýr", "júst",
+		"ýr", "jú",
+		"ýum", "júm",
+		"ýuð", "júð",
+		"ýu", "jú",
 
-		"ýsk", "jósk",
-		"ýsk", "jósk",
-		"ýsk", "jósk",
-		"ýumsk", "jóumsk",
-		"ýusk", "jóusk",
-		"ýusk", "jóusk",
+		"ýsk", "júsk",
+		"ýsk", "júsk",
+		"ýsk", "júsk",
+		"ýumsk", "júmsk",
+		"ýusk", "júsk",
+		"ýusk", "júsk",
 
 		"úinn", "úið", 2
 	],
