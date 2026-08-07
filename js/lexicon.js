@@ -3664,7 +3664,7 @@ const entries = {
 	"jakk": ["neuter noun", "yak"],
 	"jakki": ["neuter noun", "jacket"],
 	"japn": ["adjective", "same, equal (in numbers)"],
-	"jarka": ["verb", "to name, to call (with dative + nominative, or with nominative); additional note: this is an middle english borrowing"],
+	"jarka": ["verb", "to name, to call (with dative + nominative, or with nominative); additional note: this is a borrowing from early middle english <i>ȝarken</i>"],
 	"jarl": ["masculine noun", "lord, jarl, earl", "masculine none"],
 	"jarn": ["masculine noun", "iron", "masculine none"],
 	"jarn-steði": ["masculine noun", "anvil, stithy (formal)"],
