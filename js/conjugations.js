@@ -558,19 +558,19 @@ const strong_verb_a_conjugations = {
 		"hlæjandi", "hlæing", "hlæjask"
 	],
 	høggva: [
-		"høgg", "hjó",
-		"høggr", "hjóst",
-		"høggr", "hjó",
-		"høggvum", "hjóum",
-		"høggvuð", "hjóuð",
-		"høggvu", "hjóu",
+		"høgg", "hjú",
+		"høggr", "hjúst",
+		"høggr", "hjú",
+		"høggvum", "hjúm",
+		"høggvuð", "hjúð",
+		"høggvu", "hjú",
 
-		"høggsk", "hjósk",
-		"høggsk", "hjósk",
-		"høggsk", "hjósk",
-		"høggvumsk", "hjóumsk",
-		"høggvusk", "hjóusk",
-		"høggvusk", "hjóusk",
+		"høggsk", "hjúsk",
+		"høggsk", "hjúsk",
+		"høggsk", "hjúsk",
+		"høggvumsk", "hjúmsk",
+		"høggvusk", "hjúsk",
+		"høggvusk", "hjúsk",
 
 		"høggvinn", "høggvið",
 		"høggvandi", "høggving", "høggvask"
