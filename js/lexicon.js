@@ -4169,7 +4169,7 @@ const entries = {
 	"neðan": ["adverb", "from beneath"],
 	"neðri": ["adjective", "lower (neðri = comparative, neðstr = superlative)"],
 	"neðstr": ["adjective", "the bottom of the ...", "superlative-only, weak-only"],
-	"nifill": ["feminine noun", "fog, mist", "sg-only"],
+	"nifill": ["masculine noun", "fog, mist", "sg-only"],
 	"niðr": ["adverb", "downwards"],
 	"niðri": ["preposition", "downstairs"],
 	"njúta": ["verb", "to enjoy (intransitive or with genitive)", "strong verb f"],
