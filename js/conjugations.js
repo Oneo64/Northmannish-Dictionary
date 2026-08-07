@@ -358,6 +358,23 @@ const verb_conjugations = {
 
 		"a-inn", "a-ið", 1
 	],
+	strong_ey_o: [
+		"ey-", "ó-",
+		"ey-r", "ó-st",
+		"ey-r", "ó-",
+		"ey-um", "ó-um",
+		"ey-uð", "ó-uð",
+		"ey-u", "ó-u",
+
+		"ey-sk", "ó-sk",
+		"ey-sk", "ó-sk",
+		"ey-sk", "ó-sk",
+		"ey-umsk", "ó-umsk",
+		"ey-usk", "ó-usk",
+		"ey-usk", "ó-usk",
+
+		"inn", "ið", 1
+	],
 	strong_y_jo: [
 		"ý", "jú",
 		"ýr", "júst",
@@ -1004,7 +1021,12 @@ function get_conjugation(word, tags, tail) {
 	}
 
 	if (tags.includes("strong verb d")) {
-		conjugation = verb_conjugations.strong_e_o;
+		if (word.endsWith("eyja")) {
+			conjugation = verb_conjugations.strong_ey_o;
+		} else {
+			conjugation = verb_conjugations.strong_e_o;
+		}
+
 		autopick = false;
 	}
 
