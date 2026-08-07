@@ -629,7 +629,7 @@ const strong_verb_a_conjugations = {
 		"leginn", "legið",
 		"liggjandi", "ligging", "liggjask"
 	],
-	muna: [
+	mana: [
 		"man", "munda",
 		"mant", "mundir",
 		"man", "mundi",
@@ -644,8 +644,8 @@ const strong_verb_a_conjugations = {
 		"mønusk", "mundusk",
 		"mønusk", "mundusk",
 
-		"muninn", "munið",
-		"munandi", "muning", "munask"
+		"maninn", "manið",
+		"manandi", "maning", "manask"
 	],
 	sjá: [
 		"se", "svá",
