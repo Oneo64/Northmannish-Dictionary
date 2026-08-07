@@ -3983,7 +3983,7 @@ const entries = {
 	"millum": ["preposition", "amongst (with genitive)"],
 	"minn": ["determiner", "my, of mine"],
 	"miss": ["neuter noun", "disadvantage, loss, penalty"],
-	"missa": ["verb", "to lose an object (with accusative); to lose track of someone (with dative)"],
+	"missa": ["verb", "to lose an object (with accusative); to miss one's attack (with accusative); to lose track of someone (with dative)"],
 	"misstr": ["adjective", "lost, missing"],
 	"mistill": ["masculine noun", "mistletoe"],
 	"mistr": ["masculine noun", "cloud"],
