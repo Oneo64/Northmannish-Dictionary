@@ -185,6 +185,12 @@ const special_declensions = {
 		"gás", "gásunni", "gásum", "gásunum",
 		"gásar", "gásarinnar", "gása", "gásanna",
 	],
+	leifir: [
+		"", "", "leifir", "leifirnar",
+		"", "", "leifir", "leifirnar",
+		"", "", "leifum", "leifunum",
+		"", "", "leifa", "leifanna",
+	],
 	maðr: [
 		"maðr", "maðrinn", "menn", "mennirnir",
 		"mann", "manninn", "menn", "mennina",
