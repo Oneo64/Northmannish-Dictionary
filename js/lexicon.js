@@ -2825,7 +2825,7 @@ const entries = {
 	"beisli": ["neuter noun", "horse bridle"],
 	"beita": ["verb", "to chase, to pursue, to stalk (with accusative)"],
 	"beitja": ["verb", "to cause to stay, to delay, to constrain, to restrain; to bother, to nag, to pester"],
-	"belti": ["neuter noun", "vest, rig (for work or battle)"],
+	"belti": ["neuter noun", "vest, rig, belt (for work or battle)"],
 	"ber": ["neuter noun", "berry"],
 	"ber-": ["prefix", "of a bear"],
 	"ber-kjafall": ["masculine noun", "bear headdress"],
