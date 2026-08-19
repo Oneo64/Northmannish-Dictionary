@@ -664,6 +664,24 @@ const strong_verb_a_conjugations = {
 		"maninn", "manið",
 		"manandi", "maning", "manask"
 	],
+	ráða: [
+		"ræð", "ráð",
+		"ræðr", "ráðst",
+		"ræðr", "ráð",
+		"ræðum", "ráðum",
+		"ræðuð", "ráðuð",
+		"ræðu", "ráðu",
+
+		"ræðsk", "ráðsk",
+		"ræðsk", "ráðsk",
+		"ræðsk", "ráðsk",
+		"ræðumsk", "ráðumsk",
+		"ræðusk", "ráðusk",
+		"ræðusk", "ráðusk",
+
+		"ráðinn", "ráðið",
+		"ráðandi", "ráðing", "ráðask"
+	],
 	sjá: [
 		"se", "svá",
 		"ser", "svást",
