@@ -946,6 +946,9 @@ function finish_conjugation(list, word, tail) {
 	if (word.endsWith("ja")) {
 		word_forms.push(word.substring(0, word.length - 2) + "iþu" + tail);
 		word_forms.push(word.substring(0, word.length - 2) + "iþi" + tail);
+	} else if (word.endsWith("á")) {
+		word_forms.push(word + "þu" + tail);
+		word_forms.push(word + "þi" + tail);
 	} else {
 		word_forms.push(word + "þu" + tail);
 		word_forms.push(word.substring(0, word.length - 1) + "iþi" + tail);
