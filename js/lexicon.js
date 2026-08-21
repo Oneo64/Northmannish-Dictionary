@@ -3467,7 +3467,7 @@ const entries = {
 	"gørvi": ["masculine noun", "gear, equipment, apparel"],
 	"gørð": ["feminine noun", "action, work, act, deed, making"],
 	"gœja": ["verb", "to jeer, to mock, to laugh disrespectfully", "weak verb a"],
-	"gœma": ["verb", "to mind, to be bothered by (with at + clause, or with af + dative)", "", ["Gœmirþu ef et jek køkuna? = Do you mind if I eat the cake?"]],
+	"gœma": ["verb", "to mind, to be bothered by (with at + clause, or with af + dative)", "", ["Gœmirþu ef ett jek køkuna? = Do you mind if I eat the cake?"]],
 	"haf": ["neuter noun", "ocean, sea"],
 	"haf-gallr": ["masculine noun", "sea amber"],
 	"haf-jøkull": ["neuter noun", "iceberg"],
