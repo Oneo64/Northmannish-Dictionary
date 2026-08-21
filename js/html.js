@@ -110,12 +110,12 @@ const html_tables = {
 		<tr> <th>singular</th> <th>1st</th> <th>2nd</th> <th>3rd masc</th> <th>3rd fem</th> <th>3rd neu</th> <th>reflexive</th> </tr>
 		<tr> <th>nominative</th> <td>jek</td> <td>þú</td> <td>hann</td> <td>hon</td> <td>þat</td> <td>sú (rare)</td> </tr>
 		<tr> <th>accusative</th> <td>mek</td> <td>þek</td> <td>hann</td> <td>hana</td> <td>þat</td> <td>sek</td> </tr>
-		<tr> <th>dative</th> <td>mer</td> <td>þer</td> <td>hanum</td> <td>henni</td> <td>því</td> <td>ser</td> </tr>
+		<tr> <th>dative</th> <td>mír</td> <td>þír</td> <td>hanum</td> <td>henni</td> <td>því</td> <td>sír</td> </tr>
 		<tr> <th>genitive</th> <td>mín</td> <td>þín</td> <td>hans</td> <td>hannar</td> <td>þess</td> <td>sín</td> </tr>
 		<tr> <th>plural</th> <th>1st</th> <th>2nd</th> <th>3rd masc</th> <th>3rd fem</th> <th>3rd neu</th> <th>reflexive</th> </tr>
-		<tr> <th>nominative</th> <td>vit, vje (rare)</td> <td>þit, þje (rare)</td> <td>þeir</td> <td>þær</td> <td>þey</td> <td>seir (rare)</td> </tr>
-		<tr> <th>accusative</th> <td>oss</td> <td>yð</td> <td>þá</td> <td>þær</td> <td>þey</td> <td>sá</td> </tr>
-		<tr> <th>dative</th> <td>oss</td> <td>yð</td> <td>þeim</td> <td>þeim</td> <td>þeim</td> <td>seim</td> </tr>
+		<tr> <th>nominative</th> <td>vír</td> <td>þír, ír</td> <td>þeir</td> <td>þær</td> <td>þey</td> <td>seir (rare)</td> </tr>
+		<tr> <th>accusative</th> <td>os</td> <td>yð</td> <td>þá</td> <td>þær</td> <td>þey</td> <td>sá</td> </tr>
+		<tr> <th>dative</th> <td>os</td> <td>yð</td> <td>þeim</td> <td>þeim</td> <td>þeim</td> <td>seim</td> </tr>
 		<tr> <th>genitive</th> <td>okka</td> <td>ykka</td> <td>þeira</td> <td>þeira</td> <td>þeira</td> <td>seira</td> </tr>
 	</tbody></table>`,
 };
