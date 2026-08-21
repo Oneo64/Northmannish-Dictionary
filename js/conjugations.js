@@ -754,6 +754,24 @@ const strong_verb_a_conjugations = {
 		"songinn", "songið",
 		"syngjandi", "synging", "syngjask"
 	],
+	sœkja: [
+		"sœki", "sótta",
+		"sœkir", "sóttir",
+		"sœkir", "sótti",
+		"sœkjum", "sóttum",
+		"sœkjuð", "sóttuð",
+		"sœkju", "sóttu",
+
+		"sœkisk", "sóttisk",
+		"sœkisk", "sóttisk",
+		"sœkisk", "sóttisk",
+		"sœkjumsk", "sóttumsk",
+		"sœkjusk", "sóttusk",
+		"sœkjusk", "sóttusk",
+
+		"sœkinn", "sœkið",
+		"sœkjandi", "sœking", "sœkjask"
+	],
 	unna: [
 		"ann", "unna",
 		"annr", "unnir",
