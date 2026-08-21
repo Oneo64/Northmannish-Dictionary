@@ -108,13 +108,13 @@ const ipa_dict = {
 	"-rg-": "rg",
 	"-ðg-": "ðg",
 
-	"ang": "aŋg",
+	"ang": "ɑuŋg",
 	"eng": "eiŋg",
 	"ing": "iŋg",
 	"ung": "uŋg",
 	"yng": "yŋg",
 	"øng": "œŋg",
-	"-ang": "aŋk",
+	"-ang": "ɑuŋk",
 	"-eng": "eiŋk",
 	"-ing": "iŋk",
 	"-ung": "uŋk",
@@ -169,6 +169,8 @@ const ipa_dict_regional = {
 	"-pl": "pɨl",
 	"-pn": "pɨn",
 
+	"ang": "aŋg",
+	"-ang": "aŋk",
 	"eng": "ɛŋg",
 	"-eng": "ɛŋk",
 
