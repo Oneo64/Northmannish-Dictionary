@@ -139,6 +139,12 @@ const noun_declensions = {
 		"ú", "únni", "úm", "únum",
 		"úar", "úarinnar", "úa", "úanna",
 	],
+	feminine_us: [
+		"ús", "úsin", "ýs", "ýsnar",
+		"ús", "úsuna", "ýs", "ýsnar",
+		"ús", "úsunni", "úsum", "úsunum",
+		"úsar", "úsarinnar", "úsa", "úsanna",
+	],
 
 	neuter_none: [
 		"", "it", "", "in",
@@ -571,6 +577,9 @@ function get_declension(word, gender, tags) {
 			} else if (word.endsWith("ú")) {
 				declension = noun_declensions.feminine_u;
 				declension_size = 1;
+			} else if (word.endsWith("ús")) {
+				declension = noun_declensions.feminine_us;
+				declension_size = 2;
 			} else {
 				declension = noun_declensions.feminine_none;
 				declension_size = 0;
