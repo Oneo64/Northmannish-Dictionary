@@ -4738,7 +4738,7 @@ const entries = {
 	"stynja": ["verb", "to moan, to groan"],
 	"styðja": ["verb", "to support, to favour (favor), to endorse, to fend for"],
 	"stál": ["neuter noun", "steel", "sg-only"],
-	"stærja": ["adjective", "to enlarge, to make bigger"],
+	"stærja": ["verb", "to enlarge, to make bigger"],
 	"stærna": ["verb", "to grow, to become bigger", "weak verb a"],
 	"stærri": ["adjective", "bigger (comparative of stórr); greater (in power)"],
 	"stífja": ["verb", "to stiffen, to straighten"],
