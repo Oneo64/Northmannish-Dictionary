@@ -3382,7 +3382,7 @@ const entries = {
 	"gjalda": ["verb", "to pay back, to repay, to tribute; to pay an employee or worker"],
 	"gjalla": ["verb", "to resonate, to make a loud and deep noise; to yell, to scream, to cry"],
 	"gjarna": ["adverb", "gladly, willingly, readily"],
-	"gjár": ["feminine noun", "geo, gio (a narrow coastal inlet)"],
+	"gjár": ["masculine noun", "geo, gio (a narrow coastal inlet)"],
 	"gjøf": ["neuter noun", "gift"],
 	"gjøldun": ["feminine noun", "payment, tribute; wage, salary (earnings from work)"],
 	"gjølnar": ["masculine noun", "gills (of fish)", "pl-only"],
