@@ -4652,7 +4652,7 @@ const entries = {
 	"snákr": ["masculine noun", "a harmless snake"],
 	"snæ-stormr": ["masculine noun", "snowstorm, blizzard"],
 	"snær": ["masculine noun", "snow", "sg-only"],
-	"Snæskjangi": ["masculine noun", "Snæskjangi (a northern island in Myrkjørð)"],
+	"Snæskjangi": ["masculine noun", "Snæskjangi (a northern island in Myrkjørð)", "proper-name"],
 	"sníkja": ["verb", "to sneak, to crawl, to creep", "strong verb b"],
 	"snørvi": ["masculine noun", "rope, cord"],
 	"snúa": ["verb", "to turn, to rotate (with accusative)", "strong verb e"],
